@@ -4068,6 +4068,9 @@ instance.web.form.One2ManyListView = instance.web.ListView.extend({
         }
     },
     reload_record: function (record) {
+	if (!record){
+		return;
+	}
         // Evict record.id from cache to ensure it will be reloaded correctly
         this.dataset.evict_record(record.get('id'));
 
