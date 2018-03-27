@@ -465,6 +465,8 @@ var FieldCharDomain = common.AbstractField.extend(common.ReinitializeFieldMixin,
                 }
             }
         }).open();
+        this.trigger("dialog_opened", dialog);
+        return dialog;
     },
 });
 
@@ -1175,7 +1177,7 @@ var FieldBinaryFile = FieldBinary.extend({
         this._super();
         if (this.get("effective_readonly")) {
             this.$el.click(function(ev) {
-                if (self.get('value')) {
+                if (self.get('value') && self.view.datarecord.id) {
                     self.on_save_as(ev);
                 }
                 return false;
@@ -1193,6 +1195,11 @@ var FieldBinaryFile = FieldBinary.extend({
             this.do_toggle(!!this.get('value'));
             if (this.get('value')) {
                 this.$el.empty().append($("<span/>").addClass('fa fa-download'));
+                if (this.view.datarecord.id) {
+                    this.$el.css('cursor', 'pointer');
+                } else {
+                    this.$el.css('cursor', 'not-allowed');
+                }
                 if (filename) {
                     this.$el.append(" " + filename);
                 }
@@ -1365,13 +1372,11 @@ var FieldStatus = common.AbstractField.extend({
                 // For field type selection filter values according to
                 // statusbar_visible attribute of the field. For example:
                 // statusbar_visible="draft,open".
-                var select = this.field.selection;
-                for(var i=0; i < select.length; i++) {
-                    var key = select[i][0];
-                    if(key === this.get('value') || !this.options.visible || this.options.visible.indexOf(key) !== -1) {
-                        selection_unfolded.push(select[i]);
-                    }
-                }
+                var restriction = _.isString(this.options.visible) ? this.options.visible.split(',') : [];
+                selection_unfolded = _.filter(this.field.selection, function (val) {
+                    return val[0] === self.get('value') || !self.options.visible || _.contains(restriction, val[0]);
+                });
+
                 return $.when();
             }
         }, this);

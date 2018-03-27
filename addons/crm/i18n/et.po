@@ -1,21 +1,28 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm
-#
+# 
 # Translators:
-# Arma Gedonsky <armagedonsky@hot.ee>, 2016
+# Martin Trigaux, 2017
+# Arma Gedonsky <armagedonsky@hot.ee>, 2017
+# Wanradt Koell <wanradt@gmail.com>, 2017
+# Rivo Zängov <eraser@eraser.ee>, 2017
+# Gert Valdek <gert@airobot.ee>, 2017
+# Egon Raamat <egon@avalah.ee>, 2017
+# Eneli Õigus <enelioigus@gmail.com>, 2017
+# Marek Pontus, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 9.0\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-14 13:41+0000\n"
-"PO-Revision-Date: 2016-03-12 20:33+0000\n"
-"Last-Translator: Arma Gedonsky <armagedonsky@hot.ee>\n"
-"Language-Team: Estonian (http://www.transifex.com/odoo/odoo-9/language/et/)\n"
-"Language: et\n"
+"POT-Creation-Date: 2017-06-23 13:26+0000\n"
+"PO-Revision-Date: 2017-06-23 13:26+0000\n"
+"Last-Translator: Marek Pontus, 2018\n"
+"Language-Team: Estonian (https://www.transifex.com/odoo/teams/41243/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
+"Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm
@@ -24,156 +31,100 @@ msgid ""
 "\n"
 "\n"
 "            <div style=\"margin: 10px auto;\">\n"
-"            % set last_created_team = user.env['crm.team'].search([], order="
-"\"create_date desc\")[0]\n"
-"            <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:100%;"
-"\">\n"
+"            % set last_created_team = user.env['crm.team'].search([], order=\"create_date desc\")[0]\n"
+"            <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:100%;\">\n"
 "                <tbody>\n"
 "                    <tr>\n"
 "                        <td style=\"padding:2px;width:30%;\">\n"
 "                            <img src=\"web/static/src/img/logo.png\"/>\n"
 "                        </td>\n"
-"                        <td style=\"vertical-align: top; padding: 8px 10px;"
-"text-align: left;font-size: 14px;\">\n"
-"                            <a href=\"web/login\" style=\"float:right ;"
-"margin:15px auto;background: #875A7B;border-radius: 5px;color: #ffffff;font-"
-"size: 16px;padding: 10px 20px 10px 20px;text-decoration: none;\">Auto Login</"
-"a>\n"
+"                        <td style=\"vertical-align: top; padding: 8px 10px;text-align: left;font-size: 14px;\">\n"
+"                            <a href=\"web/login\" style=\"float:right ;margin:15px auto;background: #875A7B;border-radius: 5px;color: #ffffff;font-size: 16px;padding: 10px 20px 10px 20px;text-decoration: none;\">Auto Login</a>\n"
 "                        </td>\n"
 "                    </tr>\n"
 "                </tbody>\n"
 "            </table>\n"
-"            <table style=\"width:100%;text-align:justify;margin:0 auto;"
-"border-collapse:collapse;border-top:1px solid lightgray\"\">\n"
+"            <table style=\"width:100%;text-align:justify;margin:0 auto;border-collapse:collapse;border-top:1px solid lightgray\"\">\n"
 "                <tbody>\n"
 "                    <tr>\n"
 "                        <td style=\"padding:15px 10px;font-size:20px\">\n"
-"                            <p style=\"color:#875A7B;margin:0\" >Hooray!</"
-"p><br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:15px;margin-"
-"top:0pt;margin-bottom:0pt;\">\n"
-"                                <span>Your Odoo CRM application is up and "
-"running.</span></p><br>\n"
-"                            <p dir=\"ltr\" style=\"margin-top:0pt;margin-"
-"bottom:8pt;\">\n"
-"                                <span style=\"font-size:13px;font-weight:"
-"bold; \">What’s next?</span></p>\n"
-"                            <ul style=\"margin-top:0pt;margin-bottom:0pt;"
-"font-size:13px;list-style-type:disc;\">\n"
+"                            <p style=\"color:#875A7B;margin:0\" >Hooray!</p><br>\n"
+"                            <p dir=\"ltr\" style=\"font-size:15px;margin-top:0pt;margin-bottom:0pt;\">\n"
+"                                <span>Your Odoo CRM application is up and running.</span></p><br>\n"
+"                            <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:8pt;\">\n"
+"                                <span style=\"font-size:13px;font-weight:bold; \">What’s next?</span></p>\n"
+"                            <ul style=\"margin-top:0pt;margin-bottom:0pt;font-size:13px;list-style-type:disc;\">\n"
 "                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;"
-"margin-bottom:0pt;\">\n"
-"                                        <span>Try creating a lead by sending "
-"an email to </span>\n"
-"                                        <a href=\"mailto:${last_created_team."
-"alias_id.name_get()[0][1] if last_created_team.alias_id.alias_domain else "
-"user.company_id.email}\">\n"
-"                                            <span style=\"font-weight:bold; "
-"text-decoration:underline;\">${last_created_team.alias_id.name_get()[0][1] "
-"if last_created_team.alias_id.alias_domain else user.company_id.email}</"
-"span>\n"
+"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
+"                                        <span>Try creating a lead by sending an email to </span>\n"
+"                                        <a href=\"mailto:${last_created_team.alias_id.name_get()[0][1] if last_created_team.alias_id.alias_domain else user.company_id.email}\">\n"
+"                                            <span style=\"font-weight:bold; text-decoration:underline;\">${last_created_team.alias_id.name_get()[0][1] if last_created_team.alias_id.alias_domain else user.company_id.email}</span>\n"
 "                                        </a>\n"
 "                                    </p>\n"
 "                                </li>\n"
 "                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;"
-"margin-bottom:8pt;\">\n"
-"                                        <span>Track your opportunities in "
-"your sale funnel by simply dragging and dropping the cards from one column "
-"to another</span>\n"
+"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:8pt;\">\n"
+"                                        <span>Track your opportunities in your sale funnel by simply dragging and dropping the cards from one column to another</span>\n"
 "                                    </p>\n"
 "                                </li>\n"
 "                            </ul> <br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;margin-"
-"top:0pt;margin-bottom:8pt;\">\n"
-"                                <span style=\"font-weight:bold;\">Discover "
-"the </span>\n"
-"                                <span><a href=\"/"
-"web#view_type=list&model=crm.lead&action=crm.crm_lead_all_leads\">\n"
-"                                    <span style=\"font-weight:bold; text-"
-"decoration:underline;\">CRM planner</span></a></span>\n"
+"                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\">\n"
+"                                <span style=\"font-weight:bold;\">Discover the </span>\n"
+"                                <span><a href=\"/web#view_type=list&model=crm.lead&action=crm.crm_lead_all_leads\">\n"
+"                                    <span style=\"font-weight:bold; text-decoration:underline;\">CRM planner</span></a></span>\n"
 "                                <span> to activate extra features</span>\n"
-"                                <span style=\"color:#875A7B;margin:0;font-"
-"weight:bold\">(${user.env['web.planner']."
-"get_planner_progress('planner_crm')}% done)</span>\n"
+"                                <span style=\"color:#875A7B;margin:0;font-weight:bold\">(${user.env['web.planner'].get_planner_progress('planner_crm')}% done)</span>\n"
 "                            </p>\n"
-"                            <ul style=\"margin-top:0pt;margin-bottom:0pt;"
-"font-size:13px;list-style-type:disc;\">\n"
+"                            <ul style=\"margin-top:0pt;margin-bottom:0pt;font-size:13px;list-style-type:disc;\">\n"
 "                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;"
-"margin-bottom:0pt;\">\n"
-"                                        <span>Automatically assign your "
-"leads to your salesmen with the lead scoring, </span>\n"
+"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
+"                                        <span>Automatically assign your leads to your salesmen with the lead scoring, </span>\n"
 "                                    </p>\n"
 "                                </li>\n"
 "                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;"
-"margin-bottom:0pt;\">\n"
-"                                        <span>Keep in touch with your "
-"potential client with efficient email campaigns,</span>\n"
+"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
+"                                        <span>Keep in touch with your potential client with efficient email campaigns,</span>\n"
 "                                    </p>\n"
 "                                </li>\n"
 "                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;"
-"margin-bottom:0pt;\">\n"
-"                                        <span>Gain high quality insight from "
-"surveys,</span>\n"
+"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
+"                                        <span>Gain high quality insight from surveys,</span>\n"
 "                                    </p>\n"
 "                                </li>\n"
 "                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;"
-"margin-bottom:0pt;\">\n"
-"                                        <span>Get smart reporting and "
-"accurate dashboards,</span>\n"
+"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
+"                                        <span>Get smart reporting and accurate dashboards,</span>\n"
 "                                    </p>\n"
 "                                </li>\n"
 "                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;"
-"margin-bottom:8pt;\">\n"
+"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:8pt;\">\n"
 "                                        <span>And much more...</span>\n"
 "                                    </p>\n"
 "                                </li>\n"
 "                            </ul>\n"
 "                            <br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;line-"
-"height:1.3;margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span style=\"font-weight:bold;\">Need Help?"
-"</span>\n"
-"                                <span style=\"font-style:italic;\">You’re "
-"not alone</span>\n"
+"                            <p dir=\"ltr\" style=\"font-size:13px;line-height:1.3;margin-top:0pt;margin-bottom:8pt;\">\n"
+"                                <span style=\"font-weight:bold;\">Need Help?</span>\n"
+"                                <span style=\"font-style:italic;\">You’re not alone</span>\n"
 "                            </p>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;margin-"
-"top:0pt;margin-bottom:8pt;\">\n"
-"                                <span>We would be delighted to assist you "
-"along the way. Contact us at\n"
-"                                <a href=\"mailto:help@odoo.com\"><span style="
-"\"text-decoration:underline;\">\n"
-"                                help@odoo.com</span></a> if you have any "
-"question. You can also discover\n"
-"                                how to get the best out of Odoo CRM with our "
-"</span>\n"
-"                                <a href=\"https://www.odoo.com/documentation/"
-"user/9.0/crm.html\">\n"
-"                                <span style=\"text-decoration:underline;"
-"\">User Documentation</span></a>\n"
+"                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\">\n"
+"                                <span>We would be delighted to assist you along the way. Contact us through our\n"
+"                                <a href=\"https://www.odoo.com/help\">support form</a> if you have any question.\n"
+"                                You can also discover how to get the best out of Odoo CRM with our </span>\n"
+"                                <a href=\"https://www.odoo.com/documentation/user/10.0/crm.html\">\n"
+"                                <span style=\"text-decoration:underline;\">User Documentation</span></a>\n"
 "                                </span><span> or with our </span>\n"
-"                                <a href=\"https://www.odoo.com/documentation"
-"\">\n"
-"                                <span style=\"text-decoration:underline;"
-"\">API Documentation</span></a>\n"
+"                                <a href=\"https://www.odoo.com/documentation\">\n"
+"                                <span style=\"text-decoration:underline;\">API Documentation</span></a>\n"
 "                            </p>\n"
 "                            <br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;margin-"
-"top:0pt;margin-bottom:8pt;\"><span>Enjoy your Odoo experience,</span></p>\n"
+"                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\"><span>Enjoy your Odoo experience,</span></p>\n"
 "                        </td>\n"
 "                    </tr>\n"
 "                </tbody>\n"
 "            </table>\n"
-"            <div dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-"
-"bottom:8pt;color:grey\">\n"
-"                <span><br/>-- <br/>The Odoo Team<br/>PS: People love Odoo, "
-"check </span><a href=\"https://twitter.com/odoo/favorites\"><span style="
-"\"text-decoration:underline;\">what they say about it.</span></a></span>\n"
+"            <div dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;color:grey\">\n"
+"                <span><br/>-- <br/>The Odoo Team<br/>PS: People love Odoo, check </span><a href=\"https://twitter.com/odoo/favorites\"><span style=\"text-decoration:underline;\">what they say about it.</span></a></span>\n"
 "            </div>\n"
 "        </div>"
 msgstr ""
@@ -183,11 +134,9 @@ msgstr ""
 msgid ""
 "\n"
 "<p>Hello ${object.user_id and object.user_id.name or ''},</p>\n"
-"<p>The opportunity <strong>${object.name}</strong> did not have any activity "
-"since at least 5 days.</p>\n"
+"<p>The opportunity <strong>${object.name}</strong> did not have any activity since at least 5 days.</p>\n"
 "%if object.description:\n"
-"<p>Here is the description about the opportunity : </p><p><i>${object."
-"description}</i>\n"
+"<p>Here is the description about the opportunity : </p><p><i>${object.description}</i>\n"
 "%endif\n"
 "</p><p>Thank you!</p>\n"
 msgstr ""
@@ -202,43 +151,48 @@ msgstr "Koosolekud"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_nbr_activities
 msgid "# of Activities"
-msgstr ""
+msgstr "Tegevuste arv"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "(if leads are activated)"
-msgstr ""
+msgstr "(kui müügivihjed on aktiveeritud)"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "(you can change it here)"
-msgstr ""
+msgstr "(vajadusel muuda siin)"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ", if accounting or purchase is installed"
-msgstr ""
+msgstr "kui raamatupidamine või ostmine on paigaldatud"
 
 #. module: crm
 #. openerp-web
 #: code:addons/crm/static/src/js/tour.js:34
 #, python-format
 msgid ""
-"<b>Drag &amp; drop opportunities</b> between columns as you progress in your "
-"sales cycle."
+"<b>Drag &amp; drop opportunities</b> between columns as you progress in your"
+" sales cycle."
 msgstr ""
+"<b>Lohista võimalusi</b> müügitoru veergude vahel kui võimaluse staatus "
+"muutub.  "
 
 #. module: crm
 #. openerp-web
 #: code:addons/crm/static/src/js/tour.js:75
 #, python-format
-msgid "<b>Invite coworkers</b> via email.<br/><i>Enter one email per line.</i>"
+msgid ""
+"<b>Invite coworkers</b> via email.<br/><i>Enter one email per line.</i>"
 msgstr ""
+"<b>Kutsu kolleege</b> e-kirja teel.<br/><i>Sisesta üks e-posti aadress rea "
+"kohta.</i>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<i class=\"fa fa-envelope-o\"/> Ask Our Experts"
-msgstr ""
+msgstr "<i class=\"fa fa-envelope-o\"/> Küsi meie asjatundjatelt"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
@@ -248,7 +202,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<i class=\"fa fa-question-circle\"> view examples</i>"
-msgstr ""
+msgstr "<i class=\"fa fa-question-circle\"> vaata näidiseid</i>"
 
 #. module: crm
 #. openerp-web
@@ -256,19 +210,21 @@ msgstr ""
 #, python-format
 msgid ""
 "<p><b>Send messages</b> to your prospect and get replies automatically "
-"attached to this opportunity.</p><p class=\"mb0\">Type <i>'@'</i> to mention "
-"people - it's like cc-ing on emails.</p>"
+"attached to this opportunity.</p><p class=\"mb0\">Type <i>'@'</i> to mention"
+" people - it's like cc-ing on emails.</p>"
 msgstr ""
+"<p><b>Saada sõnum</b> oma potensiaalsele kliendile ja saa vastus selle "
+"võimaluse külge lisatuna.</p><p class=\"mb0\">Kirjuta <i>\"@\"</i> märk ja "
+"seejärel inimese nimi, kui soovid teda ära märkida - see on nagu koopia "
+"e-kirjadel.</p>"
 
 #. module: crm
 #: model:ir.actions.server,body_html:crm.action_email_reminder_lead
 msgid ""
 "<p>Hello ${object.user_id and object.user_id.name or ''},</p>\n"
-"<p>The opportunity <strong>${object.name}</strong> did not have any activity "
-"since at least 5 days.</p>\n"
+"<p>The opportunity <strong>${object.name}</strong> did not have any activity since at least 5 days.</p>\n"
 "%if object.description:\n"
-"<p>Here is the description about the opportunity : </p><p><i>${object."
-"description}</i>\n"
+"<p>Here is the description about the opportunity : </p><p><i>${object.description}</i>\n"
 "%endif\n"
 "</p><p>Thank you!</p>\n"
 msgstr ""
@@ -278,16 +234,16 @@ msgstr ""
 #: code:addons/crm/static/src/js/tour.js:45
 #, python-format
 msgid ""
-"<p>You will be able to customize your followup activities. Examples:</"
-"p><ol><li>introductory email</li><li>call 10 days after</li><li>second call "
-"3 days after, ...</li></ol><p class='mb0'><i>Select a standard activity for "
-"now on.</i></p>"
+"<p>You will be able to customize your followup activities. "
+"Examples:</p><ol><li>introductory email</li><li>call 10 days "
+"after</li><li>second call 3 days after, ...</li></ol><p "
+"class='mb0'><i>Select a standard activity for now on.</i></p>"
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<span class=\"fa fa-arrow-circle-o-down\"/> Install Events"
-msgstr ""
+msgstr "<span class=\"fa fa-arrow-circle-o-down\"/> Installeeri ürituste moodul"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -297,7 +253,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<span class=\"fa fa-arrow-circle-o-down\"/> Install Slides"
-msgstr ""
+msgstr "<span class=\"fa fa-arrow-circle-o-down\"/> Installeeri slaidid"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -313,6 +269,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<span class=\"fa fa-arrow-circle-o-down\"/> Install e-Commerce"
 msgstr ""
+"<span class=\"fa fa-arrow-circle-o-down\"/> Installeeri e-kaubanduse moodul"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -332,6 +289,13 @@ msgid ""
 "                        We recommend to start with standard quotations\n"
 "                        and upgrade later."
 msgstr ""
+"<span class=\"fa fa-lightbulb-o fa-lg\"/>\n"
+"                        <strong>Märkus:</strong>\n"
+"                        Pakkumiste põhjade kasutamine võib tõsta\n"
+"                        sinu pakkumiste kvaliteeti ja edukust. Selliste\n"
+"                        põhjade loomine on väga töömahukas.\n"
+"                        Soovitame alustada standartsete pakkumistega\n"
+"                        ja hiljem kasutada oma pakkumise põhjasid."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -345,42 +309,50 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<span class=\"label label-default text-center odoo_purple\">Incoming email</"
-"span>"
+"<span class=\"label label-default text-center odoo_purple\">Incoming "
+"email</span>"
 msgstr ""
+"<span class=\"label label-default text-center odoo_purple\">Sissetulev "
+"e-kiri</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<span class=\"label label-default text-center odoo_purple\">Lead</span>"
 msgstr ""
+"<span class=\"label label-default text-center "
+"odoo_purple\">Müügivihje</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<span class=\"label label-default text-center odoo_purple\">Opportunity</"
-"span>"
+"<span class=\"label label-default text-center "
+"odoo_purple\">Opportunity</span>"
 msgstr ""
+"<span class=\"label label-default text-center "
+"odoo_purple\">Müügivõimalus</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"label label-default text-center odoo_purple\">Quotation</span>"
 msgstr ""
+"<span class=\"label label-default text-center odoo_purple\">Pakkumine</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid ""
-"<span class=\"o_stat_text\" attrs=\"{'invisible': [('meeting_count', '&lt;', "
-"2)]}\"> Meetings</span>\n"
-"                                    <span class=\"o_stat_text\" attrs="
-"\"{'invisible': [('meeting_count', '&gt;', 1)]}\"> Meeting</span>"
+"<span class=\"o_stat_text\" attrs=\"{'invisible': [('meeting_count', '&lt;', 2)]}\"> Meetings</span>\n"
+"                                    <span class=\"o_stat_text\" attrs=\"{'invisible': [('meeting_count', '&gt;', 1)]}\"> Meeting</span>"
 msgstr ""
+"<span class=\"o_stat_text\" attrs=\"{'invisible': [('meeting_count', '&lt;', 2)]}\"> Kohtumised</span>\n"
+"                                    <span class=\"o_stat_text\" attrs=\"{'invisible': [('meeting_count', '&gt;', 1)]}\"> Kohtumine</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid ""
 "<span class=\"oe_form_field\" attrs=\"{'invisible': ['|', "
-"('next_activity_id', '=', False), ('date_action', '=', False)]}\"> on </span>"
+"('next_activity_id', '=', False), ('date_action', '=', False)]}\"> on "
+"</span>"
 msgstr ""
 
 #. module: crm
@@ -393,41 +365,47 @@ msgstr ""
 msgid ""
 "<span class=\"panel-title\">\n"
 "                                            <span class=\"fa fa-laptop\"/>\n"
-"                                            <strong> Screen Customization</"
-"strong>\n"
+"                                            <strong> Screen Customization</strong>\n"
 "                                        </span>"
 msgstr ""
+"<span class=\"panel-title\">\n"
+"                                            <span class=\"fa fa-laptop\"/>\n"
+"                                            <strong> Ekraani kohandamine</strong>\n"
+"                                        </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                            <span class=\"fa fa-pencil-"
-"square-o\"/>\n"
-"                                            <strong> Create Custom Reports</"
-"strong>\n"
+"                                            <span class=\"fa fa-pencil-square-o\"/>\n"
+"                                            <strong> Create Custom Reports</strong>\n"
 "                                        </span>"
 msgstr ""
+"<span class=\"panel-title\">\n"
+"                                            <span class=\"fa fa-pencil-square-o\"/>\n"
+"                                            <strong> Loo kohandatud aruanded</strong>\n"
+"                                        </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
 "                                            <span class=\"fa fa-sitemap\"/>\n"
-"                                            <strong> Workflow Customization</"
-"strong>\n"
+"                                            <strong> Workflow Customization</strong>\n"
 "                                        </span>"
 msgstr ""
+"<span class=\"panel-title\">\n"
+"                                            <span class=\"fa fa-sitemap\"/>\n"
+"                                            <strong> Tööprotsesside kohandamine</strong>\n"
+"                                        </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon="
-"\"&#57408;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
 "                                        <strong>Import a file</strong><br/>\n"
-"                                        <span class=\"small\">Recommended if "
-"&gt;50 items</span>\n"
+"                                        <span class=\"small\">Recommended if &gt;50 items</span>\n"
 "                                    </span>"
 msgstr ""
 
@@ -435,11 +413,9 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon="
-"\"&#57408;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
 "                                        <strong>Import</strong><br/>\n"
-"                                        <span class=\"small\">&gt; 200 "
-"contacts</span>\n"
+"                                        <span class=\"small\">&gt; 200 contacts</span>\n"
 "                                    </span>"
 msgstr ""
 
@@ -447,8 +423,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon="
-"\"&#57408;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
 "                                        <strong>Subscriptions</strong><br/>\n"
 "                                        <span class=\"small\"/>\n"
 "                                    </span>"
@@ -458,12 +433,9 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon="
-"\"&#57440;\"/>\n"
-"                                        <strong> Create manually</strong><br/"
-">\n"
-"                                        <span class=\"small\">&lt; 200 "
-"contacts</span>\n"
+"                                        <span class=\"fa\" data-icon=\"&#57440;\"/>\n"
+"                                        <strong> Create manually</strong><br/>\n"
+"                                        <span class=\"small\">&lt; 200 contacts</span>\n"
 "                                    </span>"
 msgstr ""
 
@@ -471,12 +443,9 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon="
-"\"&#57440;\"/>\n"
-"                                        <strong> Create manually</strong><br/"
-">\n"
-"                                        <span class=\"small\">Recommended if "
-"&lt;50 items</span>\n"
+"                                        <span class=\"fa\" data-icon=\"&#57440;\"/>\n"
+"                                        <strong> Create manually</strong><br/>\n"
+"                                        <span class=\"small\">Recommended if &lt;50 items</span>\n"
 "                                    </span>"
 msgstr ""
 
@@ -484,8 +453,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <span class=\"fa\" data-icon="
-"\"&#57440;\"/>\n"
+"                                        <span class=\"fa\" data-icon=\"&#57440;\"/>\n"
 "                                        <strong>One-time sale</strong><br/>\n"
 "                                        <span class=\"small\"/>\n"
 "                                    </span>"
@@ -495,50 +463,53 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <strong> Rules &amp; Formulas</"
-"strong>\n"
+"                                        <strong> Rules &amp; Formulas</strong>\n"
 "                                    </span>"
 msgstr ""
+"<span class=\"panel-title\">\n"
+"                                        <strong> Reeglid ja valemid</strong>\n"
+"                                    </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <strong>Specific Price per Audience</"
-"strong>\n"
+"                                        <strong>Specific Price per Audience</strong>\n"
 "                                    </span>"
 msgstr ""
+"<span class=\"panel-title\">\n"
+"                                        <strong>Määra hind vaatajaskonna kohta\n"
+"                                    </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span class=\"panel-title\">\n"
-"                                        <strong>Unique Price (default)</"
-"strong>\n"
+"                                        <strong>Unique Price (default)</strong>\n"
 "                                    </span>"
 msgstr ""
+"<span class=\"panel-title\">\n"
+"                                        <strong>Unikaalne hind (vaikimisi)</strong>\n"
+"                                    </span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<span class=\"panel-title\"><span data-icon=\"&#57366;\"/><strong> Exercise "
-"1</strong></span>\n"
+"<span class=\"panel-title\"><span data-icon=\"&#57366;\"/><strong> Exercise 1</strong></span>\n"
 "                                    <span>(Lead Manager)</span>"
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<span class=\"panel-title\"><span data-icon=\"&#57438;\"/><strong> Exercise "
-"3</strong></span>\n"
+"<span class=\"panel-title\"><span data-icon=\"&#57438;\"/><strong> Exercise 3</strong></span>\n"
 "                                    <span>(Salesperson)</span>"
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<span class=\"panel-title\"><span data-icon=\"&#57463;\"/><strong> Exercise "
-"2</strong></span>\n"
+"<span class=\"panel-title\"><span data-icon=\"&#57463;\"/><strong> Exercise 2</strong></span>\n"
 "                                    <span>(Sales Manager)</span>"
 msgstr ""
 
@@ -546,31 +517,29 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<span><strong>Contact us to customize your application:</strong><br/>\n"
-"                                    We have special options for unlimited "
-"number of customizations!\n"
+"                                    We have special options for unlimited number of customizations!\n"
 "                                    </span>"
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<strong>Click on 'Reporting' in the main menu </strong>and browse statistics:"
-msgstr ""
+"<strong>Click on 'Reporting' in the main menu </strong>and browse "
+"statistics:"
+msgstr "<strong>Vajuta menüüs \"analüüsi\" valikul </strong>ja vaata statistikat:"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Events</strong>"
-msgstr ""
+msgstr "<strong>Üritused</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<strong>Every business is different.</strong> Odoo allows to\n"
 "                        customize every application and it's usually a good\n"
-"                        advice to customize screens to fit your sales "
-"process.\n"
-"                        <strong>Customizations are done by Odoo experts.</"
-"strong>"
+"                        advice to customize screens to fit your sales process.\n"
+"                        <strong>Customizations are done by Odoo experts.</strong>"
 msgstr ""
 
 #. module: crm
@@ -581,7 +550,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Example: Qualified stage</strong>"
-msgstr ""
+msgstr "<strong>Näide: kvalifitseeritud etapp</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -591,6 +560,10 @@ msgid ""
 "                                        Group Y Axis: Expected Closing Date\n"
 "                                        Filter: Won Opportunities"
 msgstr ""
+"<strong>Harjutus: </strong>Proovi analüüsida keskmist võimaluse saamise aega.\n"
+"                                        Grupp X teljel: loomise kuupäev\n"
+"                                        Grupp Y teljel: eeldatav müügivõimaluse vastuse aeg\n"
+"                                        Filter: võidetud pakkumised"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -615,69 +588,63 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<strong>Forecast future revenues</strong><br/>\n"
-"                                    You can assess the maturity of a sales "
-"team by its ability to forecasts future revenues\n"
-"                                    for the coming months or quarters. Train "
-"the team to forecast efficiently by having\n"
-"                                    an up-to-date pipeline of "
-"opportunities.\n"
-"                                    After a few month, set the real success "
-"rate according to the stages, to have\n"
-"                                    accurate expected revenues by closing "
-"date."
+"                                    You can assess the maturity of a sales team by its ability to forecasts future revenues\n"
+"                                    for the coming months or quarters. Train the team to forecast efficiently by having\n"
+"                                    an up-to-date pipeline of opportunities.\n"
+"                                    After a few month, set the real success rate according to the stages, to have\n"
+"                                    accurate expected revenues by closing date."
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Mass mailing</strong>"
-msgstr ""
+msgstr "<strong>E-kirja turundus</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Negotiation:</strong>"
-msgstr ""
+msgstr "<strong>Läbirääkimine:</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>New:</strong>"
-msgstr ""
+msgstr "<strong>Uus:</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Next actions:</strong>"
-msgstr ""
+msgstr "<strong>Järgmised tegevused:</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<strong>Organize weekly sales meetings</strong><br/>\n"
-"                                    It's a great way to see where you can "
-"improve and keep track of the progress of your sales team. Start the "
-"pipeline review by looking at the big picture; revenues and number of "
-"opportunities by stage, by expected closing date and by salespeople."
+"                                    It's a great way to see where you can improve and keep track of the progress of your sales team. Start the pipeline review by looking at the big picture; revenues and number of opportunities by stage, by expected closing date and by salespeople."
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Propositions:</strong>"
-msgstr ""
+msgstr "<strong>Ettepanekud:</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Qualified:</strong>"
-msgstr ""
+msgstr "<strong>Kvalifitseeritud:</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"<strong>Quote template</strong> <span class=\"small\">(packaged services)</"
-"span>"
+"<strong>Quote template</strong> <span class=\"small\">(packaged "
+"services)</span>"
 msgstr ""
+"<strong>Pakkumise põhi</strong> <span class=\"small\">(pakendatud "
+"teenused)</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Recommended actions:</strong>"
-msgstr ""
+msgstr "<strong>Soovitatud tegevused:</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
@@ -688,36 +655,30 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<strong>Review the top 5 opportunities</strong><br/>\n"
-"                                    Once the big picture is clear, focus on "
-"the best opportunities. Start from stages on the right (negotiation, "
-"proposal, etc) and review the biggest opportunities one by one with the team."
+"                                    Once the big picture is clear, focus on the best opportunities. Start from stages on the right (negotiation, proposal, etc) and review the biggest opportunities one by one with the team."
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Sales Stages</strong>"
-msgstr ""
+msgstr "<strong>Müügi etapid</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Sales objectives</strong>:"
-msgstr ""
+msgstr "<strong>Müügieesmärgid</strong>:"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<strong>Sales tools</strong><br/>\n"
-"                                Efficiently following up the pipeline will "
-"lead to great improvements. But to achieve excellence in your sales "
-"organization, you need  to provide your team with sales tools. For every "
-"stage of the opportunities pipeline, identify the blocking points and "
-"create  documents to train the team."
+"                                Efficiently following up the pipeline will lead to great improvements. But to achieve excellence in your sales organization, you need  to provide your team with sales tools. For every stage of the opportunities pipeline, identify the blocking points and create  documents to train the team."
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Slides</strong>"
-msgstr ""
+msgstr "<strong>Slaidid</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -725,11 +686,13 @@ msgid ""
 "<strong>Standard quotation</strong> <span class=\"small\">(products or "
 "services)</span>"
 msgstr ""
+"<strong>Standard pakkumine</strong> <span class=\"small\">(tooted või "
+"teenused)</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Subscriptions</strong>"
-msgstr ""
+msgstr "<strong>Tellimine</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -759,8 +722,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "<strong>Trainings</strong><br/>\n"
-"                                To build a strong sales training program, "
-"you can use the following\n"
+"                                To build a strong sales training program, you can use the following\n"
 "                                apps of Odoo:"
 msgstr ""
 
@@ -784,12 +746,12 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Your Main KPIs:</strong>"
-msgstr ""
+msgstr "<strong>Sinu põhilised KPI-d</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>e-Commerce</strong>"
-msgstr ""
+msgstr "<strong>E-kaubandus</strong>"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_alias_defaults
@@ -797,18 +759,19 @@ msgid ""
 "A Python dictionary that will be evaluated to provide default values when "
 "creating new records for this alias."
 msgstr ""
+"Pythoni sõnastik, mida hinnatakse vaikimisi väärtuste määramiseks uute "
+"kirjete loomiseks sellele aliasele."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "A good pipeline should have between 5 and 7 stages"
-msgstr ""
+msgstr "Heas müügitorus on 5-7 etappi"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "A product in Odoo is something you sell or buy. It could\n"
-"                    be a goods, consumable or services. Choose how you want "
-"to\n"
+"                    be a goods, consumable or services. Choose how you want to\n"
 "                    create your products:"
 msgstr ""
 
@@ -830,7 +793,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.sales_team_form_view_in_crm
 msgid "Accept Emails From"
-msgstr ""
+msgstr "Võta e-kirju vastu"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_activity_view_search
@@ -876,12 +839,12 @@ msgstr "Tegevused"
 #: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Activities Analysis"
-msgstr ""
+msgstr "Tegevuste analüüs"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_res_users_target_sales_done
 msgid "Activities Done Target"
-msgstr ""
+msgstr "Täidetud tegevuste eesmärk"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_log_next_activity_id
@@ -890,9 +853,20 @@ msgid "Activity"
 msgstr "Tegevus"
 
 #. module: crm
+#: code:addons/crm/wizard/crm_activity_log.py:80
+#, python-format
+msgid "Activity Done"
+msgstr ""
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_lead_kanban_state
+msgid "Activity State"
+msgstr "Tegevuse olek"
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Add Features"
-msgstr ""
+msgstr "Lisa võimalusi"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -903,12 +877,12 @@ msgstr "Aadress"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_id
 msgid "Alias"
-msgstr ""
+msgstr "Alias"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_contact
 msgid "Alias Contact Security"
-msgstr ""
+msgstr "Turvakontakti alias"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_sale_config_settings_alias_domain
@@ -918,17 +892,17 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_name
 msgid "Alias Name"
-msgstr ""
+msgstr "Aliase nimi"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_domain
 msgid "Alias domain"
-msgstr ""
+msgstr "Aliase domeen"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_model_id
 msgid "Aliased Model"
-msgstr ""
+msgstr "Aliase mudel"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -951,8 +925,7 @@ msgstr ""
 #, python-format
 msgid ""
 "All email incoming to %s will automatically\n"
-"                    create new opportunity. Update your business card, phone "
-"book, social media,...\n"
+"                    create new opportunity. Update your business card, phone book, social media,...\n"
 "                    Send an email right now and see it here."
 msgstr ""
 
@@ -965,8 +938,8 @@ msgstr "Analüütiline"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "Analyzing the pipeline by expected closing date will help your team "
-"efficiently forecast its future revenues. The pipeline review will allow you "
-"to identify sales inefficiencies or pick up on the best practices."
+"efficiently forecast its future revenues. The pipeline review will allow you"
+" to identify sales inefficiencies or pick up on the best practices."
 msgstr ""
 
 #. module: crm
@@ -982,7 +955,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
 msgid "Archive"
-msgstr ""
+msgstr "Arhiveeri"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
@@ -997,41 +970,41 @@ msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
-msgid "Are you sure to execute the list of automatic merges of your contacts ?"
+msgid ""
+"Are you sure to execute the list of automatic merges of your contacts ?"
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.merge_opportunity_form
 msgid "Assign opportunities to"
-msgstr ""
+msgstr "Määra võimalused"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner_mass
 msgid "Assign these opportunities to"
-msgstr ""
+msgstr "Määra need võimalused"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner
 msgid "Assign this opportunity to"
-msgstr ""
+msgstr "Müügivõimaluse määramine"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_opening_date
 msgid "Assignation Date"
-msgstr ""
+msgstr "Määramise kuupäev"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_date_open
 msgid "Assigned"
-msgstr ""
+msgstr "Määratud"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "At the end of the deployment process, your expectations should be reached.\n"
 "                        <br/>\n"
-"                        If not, our CRM experts are available to help you "
-"achieve your KPIs."
+"                        If not, our CRM experts are available to help you achieve your KPIs."
 msgstr ""
 
 #. module: crm
@@ -1102,12 +1075,12 @@ msgstr ""
 #. module: crm
 #: model:ir.model,name:crm.model_crm_activity_report
 msgid "CRM Activity Analysis"
-msgstr ""
+msgstr "CRM tegevuste analüüs"
 
 #. module: crm
 #: model:ir.model,name:crm.model_crm_opportunity_report
 msgid "CRM Opportunity Analysis"
-msgstr ""
+msgstr "CRM müügivõimaluste analüüs"
 
 #. module: crm
 #: model:crm.activity,name:crm.crm_activity_data_call
@@ -1157,7 +1130,7 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_stage_on_change
 msgid "Change Probability Automatically"
-msgstr ""
+msgstr "Muuda tõenäosust automaatselt"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1191,7 +1164,8 @@ msgstr "Linn"
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_tag_ids
 msgid ""
-"Classify and analyze your lead/opportunity categories like: Training, Service"
+"Classify and analyze your lead/opportunity categories like: Training, "
+"Service"
 msgstr ""
 
 #. module: crm
@@ -1214,7 +1188,7 @@ msgstr ""
 #: code:addons/crm/models/crm_lead.py:867
 #, python-format
 msgid "Click to add a new opportunity"
-msgstr ""
+msgstr "Vajuta, et luua uus müügivõimalus"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_activity_action
@@ -1224,22 +1198,22 @@ msgstr ""
 #. module: crm
 #: model:ir.actions.act_window,help:crm.relate_partner_opportunities
 msgid "Click to create an opportunity related to this customer."
-msgstr ""
+msgstr "Vajuta, et luua uus müügivõimalus, mis on seotud selle kliendiga."
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_lost_reason_action
 msgid "Click to define a new lost reason."
-msgstr ""
+msgstr "Vajuta, et kirjeldada uus kaotamise põhjus."
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_lead_tag_action
 msgid "Click to define a new sales tag."
-msgstr ""
+msgstr "Vajuta, et kirjeldada uus müügi silt."
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_stage_action
 msgid "Click to set a new stage in your opportunity pipeline."
-msgstr ""
+msgstr "Vajuta, et luua uus etapp müügivõimaluste müügitorusse."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
@@ -1263,19 +1237,19 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_date_closed
 msgid "Closed Date"
-msgstr ""
+msgstr "Sulgemise kuupäev"
 
 #. module: crm
 #: code:addons/crm/wizard/crm_lead_to_opportunity.py:87
 #, python-format
 msgid "Closed/Dead leads cannot be converted into opportunities."
-msgstr ""
+msgstr "Suletud/lõppenud müügivihjeid ei saa konverteerida müügivõimalusteks."
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_color
 #: model:ir.model.fields,field_description:crm.field_crm_lead_tag_color
 msgid "Color Index"
-msgstr ""
+msgstr "Värvi index"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1307,7 +1281,7 @@ msgstr ""
 #: code:addons/crm/static/src/js/tour.js:71
 #, python-format
 msgid "Configuration options are available in the Settings app."
-msgstr ""
+msgstr "Seadistamise võimalused on saadaval Seaded moodulis."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1317,12 +1291,12 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Configure your pricelists"
-msgstr ""
+msgstr "Seadista oma hinnakirjad"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Congratulations, you're done!"
-msgstr ""
+msgstr "Palju õnne, said hakkama!"
 
 #. module: crm
 #: model:crm.lead.tag,name:crm.categ_oppor7
@@ -1337,7 +1311,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "Contact Information"
-msgstr ""
+msgstr "KontaktInformatsioon"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_contact_name
@@ -1347,7 +1321,7 @@ msgstr "Kontakti nimi"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Contact Us"
-msgstr ""
+msgstr "Võta meiega ühendust"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_partner_ids
@@ -1358,7 +1332,7 @@ msgstr "Kontaktid"
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_name
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_name
 msgid "Conversion Action"
-msgstr ""
+msgstr "Muutmise tegevus"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_date_conversion
@@ -1380,7 +1354,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner_mass
 msgid "Convert to Opportunities"
-msgstr ""
+msgstr "Muuda müügivõimalusteks"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -1392,7 +1366,7 @@ msgstr "Konverdi võimaluseks"
 #. module: crm
 #: model:ir.actions.act_window,name:crm.action_crm_send_mass_convert
 msgid "Convert to opportunities"
-msgstr ""
+msgstr "Muuda müügivõimalusteks"
 
 #. module: crm
 #: code:addons/crm/models/crm_lead.py:1038
@@ -1401,7 +1375,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:crm.action_crm_lead2opportunity_partner
 #, python-format
 msgid "Convert to opportunity"
-msgstr ""
+msgstr "Muuda müügivõimaluseks"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_message_bounce
@@ -1423,17 +1397,17 @@ msgstr "Riik"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_create_opportunity_simplified
 msgid "Create"
-msgstr ""
+msgstr "Loo"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Create Customers"
-msgstr ""
+msgstr "Loo kliente"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_create_date
 msgid "Create Date"
-msgstr ""
+msgstr "Loomise kuupäev"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner
@@ -1443,7 +1417,7 @@ msgstr "Loo võimalus"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Create Vendors"
-msgstr ""
+msgstr "Loo tarnijaid"
 
 #. module: crm
 #. openerp-web
@@ -1454,15 +1428,16 @@ msgstr ""
 
 #. module: crm
 #: selection:crm.lead2opportunity.partner,action:0
+#: selection:crm.lead2projectissue.wizard,action:0
 #: selection:crm.partner.binding,action:0
 msgid "Create a new customer"
-msgstr ""
+msgstr "Loo uus klient"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.create_opportunity_simplified
 #: model:ir.ui.view,arch_db:crm.view_create_opportunity_simplified
 msgid "Create an Opportunity"
-msgstr ""
+msgstr "Loo müügivõimalus"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1479,8 +1454,7 @@ msgstr ""
 #: model:ir.actions.act_window,help:crm.crm_lead_tag_action
 msgid ""
 "Create specific tags that fit your company's activities\n"
-"                to better classify and analyse your leads and "
-"opportunities.\n"
+"                to better classify and analyse your leads and opportunities.\n"
 "                Such categories could for instance reflect your product\n"
 "                structure or the different types of sales you do."
 msgstr ""
@@ -1504,7 +1478,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_author_id
 #: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
 msgid "Created By"
-msgstr ""
+msgstr "Loonud"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_create_uid
@@ -1549,7 +1523,7 @@ msgstr "Loomise kuupäev"
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Creation Month"
-msgstr ""
+msgstr "Loomise kuu"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_company_currency
@@ -1567,9 +1541,10 @@ msgid "Current Line"
 msgstr ""
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:1073
+#: code:addons/crm/models/crm_lead.py:1069
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_partner_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_partner_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead2projectissue_wizard_partner_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead_partner_id
 #: model:ir.model.fields,field_description:crm.field_crm_partner_binding_partner_id
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -1600,6 +1575,11 @@ msgid "Customers"
 msgstr "Kliendid"
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_planner
+msgid "Customizations"
+msgstr ""
+
+#. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_date
 msgid "Date"
 msgstr "Kuupäev"
@@ -1612,6 +1592,11 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_day_close
 msgid "Days to Close"
+msgstr "Päevi sulgemiseni"
+
+#. module: crm
+#: model:ir.actions.act_window,name:crm.action_partner_deduplicate
+msgid "Deduplicate Contacts"
 msgstr ""
 
 #. module: crm
@@ -1642,7 +1627,7 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_delay_close
 msgid "Delay to Close"
-msgstr ""
+msgstr "Viivitus sulgemiseni"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
@@ -1659,10 +1644,8 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"Depending on how complex your business is, it may take between 6 months and "
-"18 months for a new\n"
-"                                    sales team to efficiently forecasts "
-"future revenues."
+"Depending on how complex your business is, it may take between 6 months and 18 months for a new\n"
+"                                    sales team to efficiently forecasts future revenues."
 msgstr ""
 
 #. module: crm
@@ -1705,7 +1688,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_create_opportunity_simplified
 msgid "Discard"
-msgstr ""
+msgstr "Loobu"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_display_name
@@ -1734,9 +1717,10 @@ msgstr ""
 #. module: crm
 #: selection:crm.lead2opportunity.partner,action:0
 #: selection:crm.lead2opportunity.partner.mass,action:0
+#: selection:crm.lead2projectissue.wizard,action:0
 #: selection:crm.partner.binding,action:0
 msgid "Do not link to a customer"
-msgstr ""
+msgstr "Ära seo kliendiga"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1746,7 +1730,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Don't hesitate to"
-msgstr ""
+msgstr "Ärge kartke"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1756,7 +1740,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Download the"
-msgstr ""
+msgstr "Lae alla"
 
 #. module: crm
 #: model:ir.filters,name:crm.filter_draft_lead
@@ -1779,10 +1763,8 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.view_sale_config_settings
 msgid ""
 "Each sales team has an email alias that\n"
-"                                    could be setup on the sales team form. "
-"You\n"
-"                                    can setup a generic email alias to "
-"create\n"
+"                                    could be setup on the sales team form. You\n"
+"                                    can setup a generic email alias to create\n"
 "                                    incoming leads."
 msgstr ""
 
@@ -1804,7 +1786,7 @@ msgstr "E-post"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.sales_team_form_view_in_crm
 msgid "Email Alias"
-msgstr ""
+msgstr "E-posti alias"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_email_from
@@ -1814,7 +1796,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "End"
-msgstr ""
+msgstr "Lõpp"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1841,8 +1823,8 @@ msgstr "Sündmus"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"Every salesperson can analyze their own pipe by clicking on the 'switch view "
-"to graph' icon."
+"Every salesperson can analyze their own pipe by clicking on the 'switch view"
+" to graph' icon."
 msgstr ""
 
 #. module: crm
@@ -1865,7 +1847,7 @@ msgstr "Näited:"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Excel template"
-msgstr ""
+msgstr "Excel'i mall"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
@@ -1888,12 +1870,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_date_deadline
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
 msgid "Expected Closing"
-msgstr ""
+msgstr "Eeldatav sulgemine"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Expected Closing Date"
-msgstr ""
+msgstr "Eeldatav sulgemise kuupäev"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_log_planned_revenue
@@ -1909,7 +1891,7 @@ msgstr "Eeldatavad tulud"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
 msgid "Expiration Closing Month"
-msgstr ""
+msgstr "Aegumise kuu."
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_stage_legend_priority
@@ -1921,7 +1903,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
 msgid "Extended Filters"
-msgstr ""
+msgstr "Laiendatud filtrid"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -1956,7 +1938,7 @@ msgstr "Lõpetatud"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_stage_fold
 msgid "Folded in Pipeline"
-msgstr ""
+msgstr "Müügitorus volditud"
 
 #. module: crm
 #: model:crm.activity,name:crm.crm_activity_demo_followup_quote
@@ -2043,8 +2025,8 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"Great pipelines have stages <strong>aligned with the buyer's buying process</"
-"strong>, not your selling process:"
+"Great pipelines have stages <strong>aligned with the buyer's buying "
+"process</strong>, not your selling process:"
 msgstr ""
 
 #. module: crm
@@ -2105,10 +2087,8 @@ msgstr ""
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_lead_action_activities
 msgid ""
-"Here is the list of your next activities. Those are linked to your "
-"opportunities.\n"
-"                   To set a next activity, go on an opportunity and add one. "
-"It will then appear in this list."
+"Here is the list of your next activities. Those are linked to your opportunities.\n"
+"                   To set a next activity, go on an opportunity and add one. It will then appear in this list."
 msgstr ""
 
 #. module: crm
@@ -2148,9 +2128,11 @@ msgstr "ID"
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_alias_parent_thread_id
 msgid ""
-"ID of the parent record holding the alias (example: project holding the task "
-"creation alias)"
+"ID of the parent record holding the alias (example: project holding the task"
+" creation alias)"
 msgstr ""
+"Algse kirje ID, millele kuulub alias (nt: projekt, millele kuulub ülesande "
+"loomise alias)"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_line_aggr_ids
@@ -2195,7 +2177,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "If you want to do it yourself:"
-msgstr ""
+msgstr "Kui soovite ise teha:"
 
 #. module: crm
 #: model:ir.ui.menu,name:crm.menu_import_crm
@@ -2230,7 +2212,7 @@ msgstr "Sissetulevad emailid"
 #. module: crm
 #: model:crm.lead.tag,name:crm.categ_oppor4
 msgid "Information"
-msgstr ""
+msgstr "Informatsioon"
 
 #. module: crm
 #. openerp-web
@@ -2268,7 +2250,7 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_function
 msgid "Job Position"
-msgstr ""
+msgstr "Ametipositsioon"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_exclude_journal_item
@@ -2308,7 +2290,7 @@ msgstr "Viimati muudetud"
 #: model:ir.model.fields,field_description:crm.field_crm_lead_date_last_stage_update
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_date_last_stage_update
 msgid "Last Stage Update"
-msgstr ""
+msgstr "Viimase etapi värskendus"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_write_uid
@@ -2344,12 +2326,7 @@ msgid "Last Updated on"
 msgstr "Viimati uuendatud"
 
 #. module: crm
-#: model:ir.model.fields,field_description:crm.field_res_users_calendar_last_notif_ack
-msgid "Last notification marked as read from base Calendar"
-msgstr ""
-
-#. module: crm
-#: code:addons/crm/models/crm_lead.py:841
+#: code:addons/crm/models/crm_lead.py:837
 #: selection:crm.activity.report,lead_type:0 selection:crm.lead,type:0
 #: selection:crm.opportunity.report,type:0
 #: model:ir.model.fields,field_description:crm.field_crm_activity_log_lead_id
@@ -2393,7 +2370,7 @@ msgstr ""
 #. module: crm
 #: model:ir.model,name:crm.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Müügivihje/võimalus"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.action_lead_mass_mail
@@ -2417,7 +2394,7 @@ msgstr "Algatused"
 #. module: crm
 #: model:ir.ui.menu,name:crm.menu_crm_config_lead
 msgid "Leads & Opportunities"
-msgstr ""
+msgstr "Juhtlõngad & võimalused"
 
 #. module: crm
 #: code:addons/crm/models/crm_lead.py:59
@@ -2485,8 +2462,8 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner_mass
 msgid ""
-"Leads that you selected that have duplicates. If the list is empty, it means "
-"that no duplicates were found"
+"Leads that you selected that have duplicates. If the list is empty, it means"
+" that no duplicates were found"
 msgstr ""
 
 #. module: crm
@@ -2518,9 +2495,10 @@ msgstr "Read"
 
 #. module: crm
 #: selection:crm.lead2opportunity.partner,action:0
+#: selection:crm.lead2projectissue.wizard,action:0
 #: selection:crm.partner.binding,action:0
 msgid "Link to an existing customer"
-msgstr ""
+msgstr "Seo olemasoleva kliendiga"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_partner_id
@@ -2538,6 +2516,11 @@ msgid "Log & Schedule Next"
 msgstr ""
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
+msgid "Log Activity"
+msgstr ""
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form
 msgid "Log Only"
 msgstr ""
@@ -2545,6 +2528,13 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form
 msgid "Log a note..."
+msgstr "Kirjuta logimärkus..."
+
+#. module: crm
+#: model:ir.actions.act_window,name:crm.crm_activity_log_action
+#: model:ir.model,name:crm.model_crm_activity_log
+#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form
+msgid "Log an Activity"
 msgstr ""
 
 #. module: crm
@@ -2573,7 +2563,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:crm.crm_lost_reason_action
 #: model:ir.ui.menu,name:crm.menu_crm_lost_reason
 msgid "Lost Reasons"
-msgstr ""
+msgstr "Kaotamise põhjused"
 
 #. module: crm
 #: selection:crm.lead,priority:0 selection:crm.opportunity.report,priority:0
@@ -2594,6 +2584,11 @@ msgstr "Märgi kadunuks"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "Mark Won"
+msgstr ""
+
+#. module: crm
+#: model:ir.actions.server,name:crm.action_mark_as_lost
+msgid "Mark as lost"
 msgstr ""
 
 #. module: crm
@@ -2746,8 +2741,8 @@ msgstr "Sõnumi tüüp"
 #: model:ir.model.fields,help:crm.field_crm_activity_name
 msgid ""
 "Message subtype gives a more precise type on the message, especially for "
-"system notifications. For example, it can be a notification related to a new "
-"record (New), or to a stage change in a process (Stage change). Message "
+"system notifications. For example, it can be a notification related to a new"
+" record (New), or to a stage change in a process (Stage change). Message "
 "subtypes allow to precisely tune the notifications the user want to receive "
 "on its wall."
 msgstr ""
@@ -2767,7 +2762,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "Misc"
-msgstr ""
+msgstr "Muu"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_mobile
@@ -2793,7 +2788,7 @@ msgstr "Kuu"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_sale_config_settings
 msgid "More Info"
-msgstr ""
+msgstr "Rohkem infot"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2815,7 +2810,7 @@ msgstr ""
 #: model:ir.actions.server,name:crm.action_your_pipeline
 #: model:ir.ui.menu,name:crm.menu_crm_opportunities
 msgid "My Pipeline"
-msgstr ""
+msgstr "Minu müügitoru"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_group_by_name
@@ -2870,7 +2865,7 @@ msgstr "Järgmine Toiming"
 #: model:ir.actions.act_window,name:crm.crm_lead_action_activities
 #: model:ir.ui.menu,name:crm.crm_lead_menu_activities
 msgid "Next Activities"
-msgstr ""
+msgstr "Järgmised tegevused"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_next_activity_id
@@ -2890,6 +2885,12 @@ msgid "Next Activity Summary"
 msgstr ""
 
 #. module: crm
+#: code:addons/crm/wizard/crm_activity_log.py:61
+#, python-format
+msgid "Next activity"
+msgstr ""
+
+#. module: crm
 #: selection:crm.lead,kanban_state:0
 msgid "Next activity is planned"
 msgstr ""
@@ -2904,6 +2905,11 @@ msgstr ""
 #, python-format
 msgid "No Subject"
 msgstr "Subjekt puudub"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
+msgid "No activity"
+msgstr ""
 
 #. module: crm
 #: selection:crm.lead,kanban_state:0
@@ -2927,6 +2933,11 @@ msgid "Not enough stock"
 msgstr ""
 
 #. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_activity_log_note
+msgid "Note"
+msgstr "Märkus"
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Note: To use those features, you need to install the"
 msgstr "Märkus: nende omaduste kasutamiseks on vaja installeerida"
@@ -2934,7 +2945,7 @@ msgstr "Märkus: nende omaduste kasutamiseks on vaja installeerida"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_description
 msgid "Notes"
-msgstr "Märkmed"
+msgstr "Märkused"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_opportunity_report_delay_close
@@ -2959,8 +2970,8 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_activity_days
 msgid ""
-"Number of days before executing the action, allowing you to plan the date of "
-"the action."
+"Number of days before executing the action, allowing you to plan the date of"
+" the action."
 msgstr ""
 
 #. module: crm
@@ -2980,8 +2991,7 @@ msgstr "Odoo märk"
 #: model:ir.actions.act_window,help:crm.crm_lead_opportunities_tree_view
 msgid ""
 "Odoo helps you keep track of your sales pipeline to follow\n"
-"                    up potential sales and better forecast your future "
-"revenues."
+"                    up potential sales and better forecast your future revenues."
 msgstr ""
 
 #. module: crm
@@ -2999,8 +3009,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"Odoo will help you create polished, professional quotations and contracts in "
-"minutes.\n"
+"Odoo will help you create polished, professional quotations and contracts in minutes.\n"
 "                        Tell us how you sell and we will tell you what\n"
 "                        configuration will best fit your quotation process."
 msgstr ""
@@ -3031,8 +3040,8 @@ msgstr ""
 #: code:addons/crm/wizard/base_partner_merge.py:323
 #, python-format
 msgid ""
-"Only the destination contact may be linked to existing Journal Items. Please "
-"ask the Administrator if you need to merge several contacts linked to "
+"Only the destination contact may be linked to existing Journal Items. Please"
+" ask the Administrator if you need to merge several contacts linked to "
 "existing Journal Items."
 msgstr ""
 
@@ -3069,8 +3078,8 @@ msgid ""
 "Opportunities Analysis gives you an instant access to your opportunities "
 "with information such as the expected revenue, planned cost, missed "
 "deadlines or the number of interactions per opportunity. This report is "
-"mainly used by the sales manager in order to do the periodic review with the "
-"teams of the sales pipeline."
+"mainly used by the sales manager in order to do the periodic review with the"
+" teams of the sales pipeline."
 msgstr ""
 
 #. module: crm
@@ -3144,7 +3153,7 @@ msgstr "Võimalus võidetud"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_opt_out
 msgid "Opt-Out"
-msgstr ""
+msgstr "Uudiskirjast loobunud"
 
 #. module: crm
 #: selection:base.partner.merge.automatic.wizard,state:0
@@ -3158,6 +3167,9 @@ msgid ""
 "attached, even if they did not reply to it. If set, this will disable the "
 "creation of new records completely."
 msgstr ""
+"Valikuline ID, mille külge lisatakse kõik sissetulevad sõnumid, isegi kui "
+"sellele ei vastatud. Kui määratud, siis kaob täielikult võimalus luua uusi "
+"kirjeid."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
@@ -3167,12 +3179,17 @@ msgstr "Seaded"
 #. module: crm
 #: model:crm.lead.tag,name:crm.categ_oppor8
 msgid "Other"
-msgstr ""
+msgstr "Muu"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Overdue Activities"
 msgstr "Aegunud tegevused"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Overdue Opportunities"
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_delay_expected
@@ -3216,22 +3233,24 @@ msgstr "Ülemmudel"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_parent_thread_id
 msgid "Parent Record Thread ID"
-msgstr ""
+msgstr "Ülemkirje ühenduse ID"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_alias_parent_model_id
 msgid ""
-"Parent model holding the alias. The model holding the alias reference is not "
-"necessarily the model given by alias_model_id (example: project "
+"Parent model holding the alias. The model holding the alias reference is not"
+" necessarily the model given by alias_model_id (example: project "
 "(parent_model) and task (model))"
 msgstr ""
+"Ülemmudel, millel on alias. Aliase mudeli viide ei pruugi olla mudel, mis on"
+" antud nii: alias_model_id (näide: projekt (ülem_mudel) ja ülesanne (mudel))"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_activity_parent_id
 msgid ""
-"Parent subtype, used for automatic subscription. This field is not correctly "
-"named. For example on a project, the parent_id of project subtypes refers to "
-"task-related subtypes."
+"Parent subtype, used for automatic subscription. This field is not correctly"
+" named. For example on a project, the parent_id of project subtypes refers "
+"to task-related subtypes."
 msgstr ""
 
 #. module: crm
@@ -3283,7 +3302,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Pipeline"
-msgstr ""
+msgstr "Müügitoru"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.action_report_crm_opportunity_salesteam
@@ -3293,18 +3312,15 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_pivot
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Pipeline Analysis"
-msgstr ""
+msgstr "Müügitoru analüüs"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_opportunity_report_action
 msgid ""
 "Pipeline Analysis gives you an instant access to\n"
-"your opportunities with information such as the expected revenue, planned "
-"cost,\n"
-"missed deadlines or the number of interactions per opportunity. This report "
-"is\n"
-"mainly used by the sales manager in order to do the periodic review with "
-"the\n"
+"your opportunities with information such as the expected revenue, planned cost,\n"
+"missed deadlines or the number of interactions per opportunity. This report is\n"
+"mainly used by the sales manager in order to do the periodic review with the\n"
 "teams of the sales pipeline."
 msgstr ""
 
@@ -3312,12 +3328,9 @@ msgstr ""
 #: model:ir.actions.act_window,help:crm.crm_opportunity_report_action_graph
 msgid ""
 "Pipeline Analysis gives you an instant access to\n"
-"your opportunities with information such as the expected revenue, planned "
-"cost,\n"
-"missed deadlines or the number of interactions per opportunity. This report "
-"is\n"
-"mainly used by the sales manager in order to periodically review the "
-"pipeline\n"
+"your opportunities with information such as the expected revenue, planned cost,\n"
+"missed deadlines or the number of interactions per opportunity. This report is\n"
+"mainly used by the sales manager in order to periodically review the pipeline\n"
 "with the the sales teams."
 msgstr ""
 
@@ -3335,7 +3348,8 @@ msgstr "Planeeria"
 #: code:addons/crm/models/crm_lead.py:592
 #, python-format
 msgid ""
-"Please select more than one element (lead or opportunity) from the list view."
+"Please select more than one element (lead or opportunity) from the list "
+"view."
 msgstr ""
 
 #. module: crm
@@ -3344,9 +3358,22 @@ msgid ""
 "Policy to post a message on the document using the mailgateway.\n"
 "- everyone: everyone can post\n"
 "- partners: only authenticated partners\n"
-"- followers: only followers of the related document or members of following "
-"channels\n"
+"- followers: only followers of the related document or members of following channels\n"
 msgstr ""
+"Dokumendil sõnumite postitamise reeglid mailgateway'd kasutades.\n"
+"- igaüks: igaüks saab postitada\n"
+"- partnerid: ainult autenditud partnerid\n"
+"- jälgijad: ainult dokumendiga seotud jälgijad või nende kanalite liikmed\n"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_activity_preceding_activity_ids
+msgid "Preceding Activities"
+msgstr ""
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_activity_log_last_activity_id
+msgid "Previous Activity"
+msgstr "Eelmine tegevus"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3368,7 +3395,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm.field_crm_lead_probability
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_probability
 msgid "Probability"
-msgstr ""
+msgstr "Tõenäosus"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_stage_probability
@@ -3383,7 +3410,7 @@ msgstr ""
 #. module: crm
 #: model:crm.lead.tag,name:crm.categ_oppor1
 msgid "Product"
-msgstr ""
+msgstr "Toode"
 
 #. module: crm
 #. openerp-web
@@ -3395,7 +3422,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Products"
-msgstr ""
+msgstr "Tooted"
 
 #. module: crm
 #. openerp-web
@@ -3413,7 +3440,7 @@ msgstr ""
 #: model:crm.stage,name:crm.stage_lead3
 #, python-format
 msgid "Proposition"
-msgstr ""
+msgstr "Ettepanek"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3428,7 +3455,7 @@ msgstr ""
 #: model:crm.stage,name:crm.stage_lead2
 #, python-format
 msgid "Qualified"
-msgstr ""
+msgstr "Kvalifitseeritud"
 
 #. module: crm
 #. openerp-web
@@ -3483,18 +3510,29 @@ msgid "Reason for loosing leads"
 msgstr ""
 
 #. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_activity_log_recommended_activity_id
+msgid "Recommended Activities"
+msgstr ""
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_crm_activity_recommended_activity_ids
+msgid "Recommended Next Activities"
+msgstr "Soovitatud järgmine tegevus"
+
+#. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_force_thread_id
 msgid "Record Thread ID"
-msgstr ""
+msgstr "Kirje seose ID"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_referred
 msgid "Referred By"
-msgstr ""
+msgstr "Soovitas"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_action
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_action
+#: model:ir.model.fields,field_description:crm.field_crm_lead2projectissue_wizard_action
 #: model:ir.model.fields,field_description:crm.field_crm_partner_binding_action
 msgid "Related Customer"
 msgstr ""
@@ -3513,8 +3551,8 @@ msgstr ""
 #: model:ir.actions.server,subject:crm.action_email_reminder_lead
 #: model:mail.template,subject:crm.email_template_opportunity_reminder_mail
 msgid ""
-"Reminder: Lead ${object.name} from ${object.partner_id != False and object."
-"partner_id.name or object.contact_name}"
+"Reminder: Lead ${object.name} from ${object.partner_id != False and "
+"object.partner_id.name or object.contact_name}"
 msgstr ""
 
 #. module: crm
@@ -3526,11 +3564,16 @@ msgstr "Raporteerimine"
 #: model:ir.model.fields,field_description:crm.field_crm_stage_requirements
 #: model:ir.ui.view,arch_db:crm.crm_stage_form
 msgid "Requirements"
-msgstr ""
+msgstr "Nõuded"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Revenue by Salesperson"
+msgstr ""
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_planner
+msgid "Sale Flow"
 msgstr ""
 
 #. module: crm
@@ -3594,6 +3637,16 @@ msgid ""
 msgstr ""
 
 #. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
+msgid "Schedule Activity"
+msgstr ""
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
+msgid "Schedule Next Activity"
+msgstr ""
+
+#. module: crm
 #: model:ir.actions.act_window,name:crm.crm_activity_schedule_action
 msgid "Schedule an Activity"
 msgstr ""
@@ -3623,12 +3676,9 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
 msgid ""
 "Select the list of fields used to search for\n"
-"                            duplicated records. If you select several "
-"fields,\n"
-"                            Odoo will propose you to merge only those "
-"having\n"
-"                            all these fields in common. (not one of the "
-"fields)."
+"                            duplicated records. If you select several fields,\n"
+"                            Odoo will propose you to merge only those having\n"
+"                            all these fields in common. (not one of the fields)."
 msgstr ""
 
 #. module: crm
@@ -3640,12 +3690,9 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
 msgid ""
 "Selected contacts will be merged together.\n"
-"                                All documents linked to one of these "
-"contacts\n"
-"                                will be redirected to the destination "
-"contact.\n"
-"                                You can remove contacts from this list to "
-"avoid merging them."
+"                                All documents linked to one of these contacts\n"
+"                                will be redirected to the destination contact.\n"
+"                                You can remove contacts from this list to avoid merging them."
 msgstr ""
 
 #. module: crm
@@ -3670,12 +3717,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm.field_crm_activity_sequence
 #: model:ir.model.fields,field_description:crm.field_crm_stage_sequence
 msgid "Sequence"
-msgstr "Jada"
+msgstr "Järjestus"
 
 #. module: crm
 #: model:crm.lead.tag,name:crm.categ_oppor3
 msgid "Services"
-msgstr ""
+msgstr "Teenused"
 
 #. module: crm
 #. openerp-web
@@ -3706,8 +3753,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "Setting up your sales funnel is just the first step. To achieve a\n"
-"                      significant boost, we will help you get the most out "
-"of\n"
+"                      significant boost, we will help you get the most out of\n"
 "                      Odoo CRM to transform how your salespeople work.\n"
 "                      That's the purpose of this guide."
 msgstr ""
@@ -3715,7 +3761,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_sale_config_settings
 msgid "Setup your domain alias"
-msgstr ""
+msgstr "Seadista oma domeeni teine nimi"
 
 #. module: crm
 #: model:res.groups,name:crm.group_use_lead
@@ -3732,6 +3778,13 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Show all opportunities for which the next action date is before today"
+msgstr ""
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid ""
+"Show all opportunities with a deadline for which the next action date is "
+"before today"
 msgstr ""
 
 #. module: crm
@@ -3754,12 +3807,12 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Slides"
-msgstr ""
+msgstr "Presentatsioon"
 
 #. module: crm
 #: model:crm.lead.tag,name:crm.categ_oppor2
 msgid "Software"
-msgstr ""
+msgstr "Tarkvara"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3772,6 +3825,8 @@ msgid ""
 "Some examples of lost reasons: \"We don't have people/skill\", \"Price too "
 "high\""
 msgstr ""
+"Mõned näited kaotamise põhjustest: \"meil puuduvad kvalifitseeirtud "
+"töötajad/oskused\", \"liiga kallis hind\""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_source_id
@@ -3801,7 +3856,7 @@ msgstr "Tase"
 #. module: crm
 #: model:mail.message.subtype,name:crm.mt_lead_stage
 msgid "Stage Changed"
-msgstr ""
+msgstr "Etapp muudetud"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_stage_name
@@ -3817,7 +3872,7 @@ msgstr ""
 #. module: crm
 #: model:mail.message.subtype,description:crm.mt_lead_stage
 msgid "Stage changed"
-msgstr ""
+msgstr "Etapp muudetud"
 
 #. module: crm
 #: model:ir.model,name:crm.model_crm_stage
@@ -3882,14 +3937,13 @@ msgstr "Tellimuste haldus"
 #: model:ir.model.fields,field_description:crm.field_crm_activity_log_title_action
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_subject
 msgid "Summary"
-msgstr ""
+msgstr "Kokkuvõte"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "Systematic organization is what makes the difference\n"
-"                        between good and great salespeople! Setup a "
-"pipeline\n"
+"                        between good and great salespeople! Setup a pipeline\n"
 "                        that is in line with your sales cycle."
 msgstr ""
 
@@ -3897,7 +3951,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Tag"
-msgstr ""
+msgstr "Silt"
 
 #. module: crm
 #: sql_constraint:crm.lead.tag:0
@@ -3918,7 +3972,7 @@ msgstr "Ülesanne"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_stage_team_id
 msgid "Team"
-msgstr ""
+msgstr "Meeskond"
 
 #. module: crm
 #: model:ir.filters,name:crm.ir_filters_crm_opportunity_report_next_action
@@ -3972,10 +4026,13 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_alias_model_id
 msgid ""
-"The model (Odoo Document Kind) to which this alias corresponds. Any incoming "
-"email that does not reply to an existing record will cause the creation of a "
-"new record of this model (e.g. a Project Task)"
+"The model (Odoo Document Kind) to which this alias corresponds. Any incoming"
+" email that does not reply to an existing record will cause the creation of "
+"a new record of this model (e.g. a Project Task)"
 msgstr ""
+"Aliasele vastv mudel (Odoo dokumendi laadi). Iga sissetulev kiri, mis ei "
+"vasta olemasolevale kirjele, põhjustab uue mudeli kirje loomise (nt projekti"
+" ülesanne)"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_alias_name
@@ -3983,12 +4040,14 @@ msgid ""
 "The name of the email alias, e.g. 'jobs' if you want to catch emails for "
 "<jobs@example.odoo.com>"
 msgstr ""
+"E-maili aliase nimi, nt \"ametikoht\" kui soovid saada e-kirju "
+"<ametikoht@example.odoo.com>"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_partner_name
 msgid ""
-"The name of the future partner company that will be created while converting "
-"the lead into opportunity"
+"The name of the future partner company that will be created while converting"
+" the lead into opportunity"
 msgstr ""
 
 #. module: crm
@@ -3999,6 +4058,10 @@ msgid ""
 "the sender (From) address, or will use the Administrator account if no "
 "system user is found for that address."
 msgstr ""
+"E-kirja saamisel loodud kirjete omanik, mis tulevad sellele e-posti "
+"aliasele. Kui see väli pole määratud, siis süsteem üritab leida õige omaniku"
+" lähtuvalt saatja (From) aadressist või kasutab administraatori kontot, kui "
+"ei leita ühtegi süsteemikontot sellise e-posti aadressiga."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4014,8 +4077,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "The three main practices to develop a sales force are\n"
-"                        <strong>methodical organization</strong>, "
-"<strong>trainings</strong> and\n"
+"                        <strong>methodical organization</strong>, <strong>trainings</strong> and\n"
 "                        <strong>good sales tools</strong>."
 msgstr ""
 
@@ -4030,21 +4092,14 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "There are several ways for your company to generate leads with Odoo CRM.\n"
-"                        One of them is using your company's generic email "
-"address as a trigger\n"
-"                        to create a new lead in the system. In Odoo, each "
-"one of your sales teams\n"
-"                        is linked to its own email address from which "
-"prospects can reach them.\n"
-"                        For example, if the personal email address of your "
-"Direct team is\n"
-"                        direct@mycompany.example.com, every email sent when "
-"a new prospect\n"
-"                        contacts you will automatically create a new "
-"opportunity into the sales team.\n"
+"                        One of them is using your company's generic email address as a trigger\n"
+"                        to create a new lead in the system. In Odoo, each one of your sales teams\n"
+"                        is linked to its own email address from which prospects can reach them.\n"
+"                        For example, if the personal email address of your Direct team is\n"
+"                        direct@mycompany.example.com, every email sent when a new prospect\n"
+"                        contacts you will automatically create a new opportunity into the sales team.\n"
 "\n"
-"                        That's the easiest way to integrate Odoo with third "
-"party apps."
+"                        That's the easiest way to integrate Odoo with third party apps."
 msgstr ""
 
 #. module: crm
@@ -4059,6 +4114,9 @@ msgid ""
 "outbound emails for this record before being sent. Separate multiple email "
 "addresses with a comma"
 msgstr ""
+"Need e-posti aadressid lisatakse kõigi sissetulevate ja väljaminevate "
+"e-kirjade pimekoopiasse (CC) enne saatmist. Eraldage mitu e-posti aadressi "
+"komadega"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
@@ -4082,22 +4140,20 @@ msgstr ""
 #: code:addons/crm/static/src/js/tour.js:40
 #, python-format
 msgid ""
-"This opportunity has <b>no next activity scheduled</b>. <i>Click to set one."
-"</i>"
+"This opportunity has <b>no next activity scheduled</b>. <i>Click to set "
+"one.</i>"
 msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_stage_probability
 msgid ""
-"This percentage depicts the default/average probability of the Case for this "
-"stage to be a success"
+"This percentage depicts the default/average probability of the Case for this"
+" stage to be a success"
 msgstr ""
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_opportunity_report_action_lead
-msgid ""
-"This report analyses the source of your leads\n"
-"(including those converted into opportunities)."
+msgid "This report analyses the source of your leads."
 msgstr ""
 
 #. module: crm
@@ -4106,6 +4162,7 @@ msgid ""
 "This stage is folded in the kanban view when there are no records in that "
 "stage to display."
 msgstr ""
+"See etapp on kanban vaates volditud, kui puuduvad etapikirjed, mida kuvada."
 
 #. module: crm
 #: code:addons/crm/models/crm_lead.py:1010
@@ -4141,7 +4198,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Today Activities"
-msgstr ""
+msgstr "Tänased tegevused"
 
 #. module: crm
 #: model:crm.lost.reason,name:crm.lost_reason_1
@@ -4185,13 +4242,13 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
 msgid "Unarchive"
-msgstr ""
+msgstr "Võta arhiivist välja"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Unassigned"
-msgstr ""
+msgstr "Määramata"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4199,6 +4256,8 @@ msgid ""
 "Unless you are starting a new business, you probably have a list of "
 "customers and vendors you'd like to import."
 msgstr ""
+"Kui te ei alusta uut ettevõtet, siis teil on tõenäoliselt nimekiri "
+"klientidest ja hankijatest, keda sooviksite importida."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
@@ -4232,24 +4291,22 @@ msgstr ""
 #: model:ir.actions.act_window,help:crm.crm_lead_all_leads
 msgid ""
 "Use leads if you need a qualification step before creating an\n"
-"                    opportunity or a customer. It can be a business card you "
-"received,\n"
-"                    a contact form filled in your website, or a file of "
-"unqualified\n"
+"                    opportunity or a customer. It can be a business card you received,\n"
+"                    a contact form filled in your website, or a file of unqualified\n"
 "                    prospects you import, etc."
 msgstr ""
 
 #. module: crm
 #: selection:sale.config.settings,group_use_lead:0
 msgid ""
-"Use leads if you need a qualification step before creating an opportunity or "
-"a customer"
+"Use leads if you need a qualification step before creating an opportunity or"
+" a customer"
 msgstr ""
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_lost_reason_action
 msgid "Use lost reasons to explain why an opportunity is lost."
-msgstr ""
+msgstr "Kasuta kaotamise põhjuseid, et seletada, mis müügivõimalus kaotati."
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.relate_partner_opportunities
@@ -4267,10 +4324,8 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "Use subscription for recurring billing.\n"
-"                                            Examples of subscription may "
-"include:\n"
-"                                            annual support contract, "
-"monthly\n"
+"                                            Examples of subscription may include:\n"
+"                                            annual support contract, monthly\n"
 "                                            subscription to a service, etc."
 msgstr ""
 
@@ -4311,7 +4366,7 @@ msgstr "Kasutaja"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_user_email
 msgid "User Email"
-msgstr ""
+msgstr "Kasutaja e-post"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_user_login
@@ -4336,7 +4391,7 @@ msgstr ""
 #. module: crm
 #: selection:crm.lead,priority:0 selection:crm.opportunity.report,priority:0
 msgid "Very High"
-msgstr ""
+msgstr "Väga kõrge"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_sale_config_settings_module_crm_voip
@@ -4369,12 +4424,14 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "We can handle the whole import process\n"
-"                                        for you: simply send your Odoo "
-"project\n"
-"                                        manager a CSV file containing all "
-"your\n"
+"                                        for you: simply send your Odoo project\n"
+"                                        manager a CSV file containing all your\n"
 "                                        data."
 msgstr ""
+"Me saame hallata kogu impordi protsessi\n"
+"                                        sinu eest: lihtsalt saada oma Odoo projekti-\n"
+"                                        juhile CSV fail, mis sisaldab kõiki\n"
+"                                        andmeid."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4387,10 +4444,8 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "We designed Odoo to help you grow your business. Odoo CRM\n"
-"                      is not just a tool, we want it to have a major impact "
-"on your\n"
-"                      sales performance. That's our mission, and we are "
-"serious about it."
+"                      is not just a tool, we want it to have a major impact on your\n"
+"                      sales performance. That's our mission, and we are serious about it."
 msgstr ""
 
 #. module: crm
@@ -4406,12 +4461,12 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Weekly Meetings"
-msgstr ""
+msgstr "Iga-nädalane kohtumine"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Welcome"
-msgstr ""
+msgstr "Tere tulemast"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4422,15 +4477,15 @@ msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
-msgid "What are the main KPIs you need to track for your the sales activities?"
+msgid ""
+"What are the main KPIs you need to track for your the sales activities?"
 msgstr ""
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "What are your sales objectives? What challenges are you\n"
-"                        dealing with? Being clear on your expectations is "
-"the first step\n"
+"                        dealing with? Being clear on your expectations is the first step\n"
 "                        of a successful implementation."
 msgstr ""
 
@@ -4465,7 +4520,7 @@ msgstr "Nõustaja"
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 #, python-format
 msgid "Won"
-msgstr ""
+msgstr "Võidetud"
 
 #. module: crm
 #: model:ir.filters,name:crm.filter_opportunity_country
@@ -4500,14 +4555,10 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"You don't need to review lost opportunities at every sales meeting, but it's "
-"good\n"
-"                            practice to do it at least once a month. Ask "
-"your team to set tags on opportunities to\n"
-"                            identify why they were lost and use this "
-"information to generate statistics. Here are\n"
-"                            some examples of tags to create: no budget, "
-"competition, no pain found, etc."
+"You don't need to review lost opportunities at every sales meeting, but it's good\n"
+"                            practice to do it at least once a month. Ask your team to set tags on opportunities to\n"
+"                            identify why they were lost and use this information to generate statistics. Here are\n"
+"                            some examples of tags to create: no budget, competition, no pain found, etc."
 msgstr ""
 
 #. module: crm
@@ -4520,8 +4571,7 @@ msgstr ""
 #: model:ir.actions.act_window,help:crm.crm_case_form_view_salesteams_opportunity
 msgid ""
 "You will be able to plan meetings and log activities from\n"
-"                    opportunities, convert them into quotations, attach "
-"related\n"
+"                    opportunities, convert them into quotations, attach related\n"
 "                    documents, track all discussions, and much more."
 msgstr ""
 
@@ -4538,8 +4588,7 @@ msgstr ""
 #: model:ir.actions.act_window,help:crm.crm_lead_opportunities_tree_view
 msgid ""
 "You will be able to plan meetings and phone calls from\n"
-"                    opportunities, convert them into quotations, attach "
-"related\n"
+"                    opportunities, convert them into quotations, attach related\n"
 "                    documents, track all discussions, and much more."
 msgstr ""
 
@@ -4639,7 +4688,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "e.g. Discuss proposal"
-msgstr ""
+msgstr "nt aruta ettepanekut"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
@@ -4696,13 +4745,13 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "to describe<br/> your experience or to suggest improvements!"
-msgstr ""
+msgstr "kirjeldamaks <br/> teie kogemust või soovitama parandusi!"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
-"to organize all your documents like: customer presentations, product sheets, "
-"comparisons with competitors, pain points sheets, training materials, etc."
+"to organize all your documents like: customer presentations, product sheets,"
+" comparisons with competitors, pain points sheets, training materials, etc."
 msgstr ""
 
 #. module: crm

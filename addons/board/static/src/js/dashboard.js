@@ -10,6 +10,7 @@ var form_common = require('web.form_common');
 var Model = require('web.DataModel');
 var pyeval = require('web.pyeval');
 var ViewManager = require('web.ViewManager');
+var data_manager = require('web.data_manager');
 
 var _t = core._t;
 var QWeb = core.qweb;
@@ -174,6 +175,8 @@ var DashBoard = form_common.FormWidget.extend({
         this.rpc('/web/view/add_custom', {
             view_id: this.view.fields_view.view_id,
             arch: arch
+        }).then(function() {
+            data_manager.invalidate();
         });
     },
     on_load_action: function(result, index, action_attrs) {
@@ -270,6 +273,14 @@ var DashBoard = form_common.FormWidget.extend({
                         kanban.loaded.done(function() {
                             kanban.controller.open_record = function(event, editable) {
                                 new_form_action(event.data.id, editable);
+                            };
+                        });
+                    }
+                    var calendar = am.inner_widget.views.calendar;
+                    if (calendar) {
+                        calendar.loaded.done(function () {
+                            calendar.controller.open_event = function (id, title) {
+                                new_form_action(Number(id));
                             };
                         });
                     }
@@ -423,6 +434,7 @@ FavoriteMenu.include({
         }).then(function (r) {
             if (r) {
                 self.do_notify(_.str.sprintf(_t("'%s' added to dashboard"), name), '');
+                data_manager.invalidate();
             } else {
                 self.do_warn(_t("Could not add filter to dashboard"));
             }

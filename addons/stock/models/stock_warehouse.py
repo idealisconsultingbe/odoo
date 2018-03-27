@@ -8,7 +8,7 @@ from dateutil import relativedelta
 from odoo import api, fields, models, _
 from odoo.addons import decimal_precision as dp
 from odoo.exceptions import UserError, ValidationError
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 import logging
 
@@ -21,7 +21,7 @@ class Warehouse(models.Model):
     # namedtuple used in helper methods generating values for routes
     Routing = namedtuple('Routing', ['from_loc', 'dest_loc', 'picking_type'])
 
-    name = fields.Char('Warehouse Name', index=True, required=True)
+    name = fields.Char('Warehouse Name', index=True, required=True, default=lambda self: self.env['res.company']._company_default_get('stock.inventory').name)
     active = fields.Boolean('Active', default=True)
     company_id = fields.Many2one(
         'res.company', 'Company', default=lambda self: self.env['res.company']._company_default_get('stock.inventory'),
@@ -427,6 +427,7 @@ class Warehouse(models.Model):
                 self.Routing(warehouse.lot_stock_id, warehouse.wh_pack_stock_loc_id, warehouse.pick_type_id),
                 self.Routing(warehouse.wh_pack_stock_loc_id, warehouse.wh_output_stock_loc_id, warehouse.pack_type_id),
                 self.Routing(warehouse.wh_output_stock_loc_id, customer_loc, warehouse.out_type_id)],
+            'company_id': warehouse.company_id.id,
         }) for warehouse in self)
 
     @api.multi
@@ -436,6 +437,7 @@ class Warehouse(models.Model):
             'product_categ_selectable': True,
             'product_selectable': False,
             'sequence': 10,
+            'company_id': self.company_id.id,
         }
 
     @api.model
@@ -455,7 +457,8 @@ class Warehouse(models.Model):
             'product_selectable': True,
             'product_categ_selectable': True,
             'supplied_wh_id': self.id,
-            'supplier_wh_id': supplier_warehouse.id}
+            'supplier_wh_id': supplier_warehouse.id,
+            'company_id': self.company_id.id}
 
     def _get_inter_wh_route(self, supplier_warehouse):
         # FIXME - remove me in master/saas-14
@@ -469,7 +472,8 @@ class Warehouse(models.Model):
             'product_selectable': True,
             'product_categ_selectable': True,
             'active': self.delivery_steps != 'ship_only' and self.reception_steps != 'one_step',
-            'sequence': 20}
+            'sequence': 20,
+            'company_id': self.company_id.id}
 
     def _get_crossdock_route(self, route_name):
         # FIXME - remove me in master/saas-14
@@ -614,7 +618,8 @@ class Warehouse(models.Model):
                         pull.write({'name': pull.name.replace(warehouse.name, new_name, 1)})
                     for push in route.push_ids:
                         push.write({'name': push.name.replace(warehouse.name, new_name, 1)})
-                warehouse.mto_pull_id.write({'name': warehouse.mto_pull_id.name.replace(warehouse.name, new_name, 1)})
+                if warehouse.mto_pull_id:
+                    warehouse.mto_pull_id.write({'name': warehouse.mto_pull_id.name.replace(warehouse.name, new_name, 1)})
         for warehouse in self:
             sequence_data = warehouse._get_sequence_values()
             warehouse.in_type_id.sequence_id.write(sequence_data['in_type_id'])
@@ -685,11 +690,11 @@ class Warehouse(models.Model):
 
     def _get_sequence_values(self):
         return {
-            'in_type_id': {'name': self.name + _('Sequence in'), 'prefix': self.code + '/IN/', 'padding': 5},
-            'out_type_id': {'name': self.name + _('Sequence out'), 'prefix': self.code + '/OUT/', 'padding': 5},
-            'pack_type_id': {'name': self.name + _('Sequence packing'), 'prefix': self.code + '/PACK/', 'padding': 5},
-            'pick_type_id': {'name': self.name + _('Sequence picking'), 'prefix': self.code + '/PICK/', 'padding': 5},
-            'int_type_id': {'name': self.name + _('Sequence internal'), 'prefix': self.code + '/INT/', 'padding': 5},
+            'in_type_id': {'name': self.name + ' ' + _('Sequence in'), 'prefix': self.code + '/IN/', 'padding': 5},
+            'out_type_id': {'name': self.name + ' ' + _('Sequence out'), 'prefix': self.code + '/OUT/', 'padding': 5},
+            'pack_type_id': {'name': self.name + ' ' + _('Sequence packing'), 'prefix': self.code + '/PACK/', 'padding': 5},
+            'pick_type_id': {'name': self.name + ' ' + _('Sequence picking'), 'prefix': self.code + '/PICK/', 'padding': 5},
+            'int_type_id': {'name': self.name + ' ' + _('Sequence internal'), 'prefix': self.code + '/INT/', 'padding': 5},
         }
 
     @api.multi
@@ -842,7 +847,7 @@ class Orderpoint(models.Model):
             # These days will be substracted when creating the PO
             days += self.product_id._select_seller().delay or 0.0
         date_planned = start_date + relativedelta.relativedelta(days=days)
-        return date_planned.strftime(DEFAULT_SERVER_DATE_FORMAT)
+        return date_planned.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
 
     @api.multi
     def _prepare_procurement_values(self, product_qty, date=False, group=False):

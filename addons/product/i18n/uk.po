@@ -3,18 +3,19 @@
 # * product
 # 
 # Translators:
-# Bohdan Lisnenko <lem8r.ka11a@gmail.com>, 2016
+# Bohdan Lisnenko, 2016
 # ТАрас <tratatuta@i.ua>, 2016
-# Martin Trigaux <mat@odoo.com>, 2016
-# Zoriana Zaiats <sorenabell@quintagroup.com>, 2016
+# Martin Trigaux, 2016
+# Zoriana Zaiats, 2016
 # Yaroslav Molochko <onorua@gmail.com>, 2016
+# Alina Semeniuk <alinasemeniuk1@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0c\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-29 14:00+0000\n"
-"PO-Revision-Date: 2016-09-29 14:00+0000\n"
-"Last-Translator: Yaroslav Molochko <onorua@gmail.com>, 2016\n"
+"POT-Creation-Date: 2017-06-23 13:27+0000\n"
+"PO-Revision-Date: 2017-06-23 13:27+0000\n"
+"Last-Translator: Alina Semeniuk <alinasemeniuk1@gmail.com>, 2017\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +32,7 @@ msgstr "Категорія товару"
 #: model:ir.model.fields,field_description:product.field_product_product_product_variant_count
 #: model:ir.model.fields,field_description:product.field_product_template_product_variant_count
 msgid "# Product Variants"
-msgstr ""
+msgstr "# Варіанти товару"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_category_product_count
@@ -191,6 +192,9 @@ msgid ""
 " This description will be copied to every Sale Order, Delivery Order and "
 "Customer Invoice/Refund"
 msgstr ""
+"Опис товару, який ви хочете повідомити своїм клієнтам. Цей опис буде "
+"скопійовано до кожного замовлення на продаж, замовлення на поставку та "
+"рахунок-фактуру/повернення"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_description_purchase
@@ -200,6 +204,9 @@ msgid ""
 "This description will be copied to every Purchase Order, Receipt and Vendor "
 "Bill/Refund."
 msgstr ""
+"Опис товару, який ви хочете повідомити своїм постачальникам. Цей опис буде "
+"скопійовано до будь-якого замовлення на купівлю, квитанцію та рахунок "
+"постачальника/повернення коштів."
 
 #. module: product
 #: model:product.product,website_description:product.product_product_9
@@ -214,6 +221,8 @@ msgid ""
 "A precise description of the Product, used only for internal information "
 "purposes."
 msgstr ""
+"Точний опис товару, який використовується лише для внутрішніх інформаційних "
+"цілей."
 
 #. module: product
 #: model:ir.actions.act_window,help:product.product_pricelist_action2
@@ -237,6 +246,10 @@ msgid ""
 "A service is a non-material product you provide.\n"
 "A digital content is a non-material product you sell online. The files attached to the products are the one that are sold on the e-commerce such as e-books, music, pictures,... The \"Digital Product\" module has to be installed."
 msgstr ""
+"Складський товар - товар, для якого ви керуєте складом. Додаток \"Інвентаризація\" має бути встановлений.\n"
+"З іншого боку, витратним товаром є той, для якого склад не керований.\n"
+"Послуга - це нематеріальний товар, який ви надаєте.\n"
+"Цифровий вміст - це нематеріальний товар, який ви продаєте в Інтернеті. Модуль \"цифровий продукт\" повинен бути встановлений. Програмне забезпечення - це те, що продається в електронній комерції, таке як електронні книги, музика, картинки ..."
 
 #. module: product
 #: model:product.product,website_description:product.product_product_11
@@ -298,13 +311,13 @@ msgstr ""
 #: model:product.product,name:product.product_product_7
 #: model:product.template,name:product.product_product_7_product_template
 msgid "Apple In-Ear Headphones"
-msgstr ""
+msgstr "Навушники Apple"
 
 #. module: product
 #: model:product.product,name:product.product_product_9
 #: model:product.template,name:product.product_product_9_product_template
 msgid "Apple Wireless Keyboard"
-msgstr ""
+msgstr "Бездротова клавіатура Apple"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_normal_form_view
@@ -403,6 +416,7 @@ msgid ""
 "Base price to compute the customer price. Sometimes called the catalog "
 "price."
 msgstr ""
+"Базова ціна для обчислення ціни покупця. Іноді називають ціну каталогу."
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_base
@@ -436,7 +450,7 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_image
 msgid "Big-sized image"
-msgstr ""
+msgstr "Зображення великого розміру"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_uom_factor_inv
@@ -463,7 +477,7 @@ msgstr ""
 #: model:product.product,name:product.product_product_5b
 #: model:product.template,name:product.product_product_5b_product_template
 msgid "Bose Mini Bluetooth Speaker"
-msgstr ""
+msgstr "Гучномовець Bose Mini Bluetooth "
 
 #. module: product
 #: model:product.product,website_description:product.product_product_5b
@@ -636,6 +650,7 @@ msgid "Companies"
 msgstr "Компанії"
 
 #. module: product
+#: model:ir.model.fields,field_description:product.field_product_price_history_company_id
 #: model:ir.model.fields,field_description:product.field_product_pricelist_company_id
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_company_id
 #: model:ir.model.fields,field_description:product.field_product_product_company_id
@@ -643,11 +658,6 @@ msgstr "Компанії"
 #: model:ir.model.fields,field_description:product.field_product_template_company_id
 msgid "Company"
 msgstr "Компанія"
-
-#. module: product
-#: model:ir.model.fields,field_description:product.field_product_price_history_company_id
-msgid "Company id"
-msgstr ""
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
@@ -708,6 +718,9 @@ msgid ""
 " and used as a base price on purchase orders. Expressed in the default unit "
 "of measure of the product."
 msgstr ""
+"Вартість шаблону товару, що використовується для стандартної оцінки вартості"
+" акцій у бухгалтерському обліку та використовується як базова ціна на "
+"замовлення на придбання. Виражається в стандартній одиниці виміру товару."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_template_standard_price
@@ -784,7 +797,6 @@ msgid ""
 msgstr ""
 
 #. module: product
-#: model:ir.model,name:product.model_res_currency
 #: model:ir.model.fields,field_description:product.field_product_pricelist_currency_id
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_currency_id
 #: model:ir.model.fields,field_description:product.field_product_product_currency_id
@@ -814,7 +826,7 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_partner_ref
 msgid "Customer Ref"
-msgstr ""
+msgstr "Референс клієнта"
 
 #. module: product
 #: model:product.product,name:product.product_delivery_02
@@ -837,6 +849,8 @@ msgstr "День(і)"
 #: model:ir.model.fields,help:product.field_product_template_uom_id
 msgid "Default Unit of Measure used for all stock operation."
 msgstr ""
+"Одиниця вимірювання за замовчуванням, що використовується для всіх операцій "
+"складу."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_uom_po_id
@@ -845,6 +859,9 @@ msgid ""
 "Default Unit of Measure used for purchase orders. It must be in the same "
 "category than the default unit of measure."
 msgstr ""
+"Одиниця вимірювання за замовчуванням, що використовується для замовлень на "
+"купівлю. Вона повинна бути такою ж категорією, як одиниця виміру за "
+"замовчуванням."
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_delay
@@ -874,7 +891,7 @@ msgstr ""
 #: model:ir.model.fields,help:product.field_product_attribute_sequence
 #: model:ir.model.fields,help:product.field_product_attribute_value_sequence
 msgid "Determine the display order"
-msgstr ""
+msgstr "Визначте порядок відображення"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_display_name
@@ -1127,6 +1144,9 @@ msgid ""
 "Gives the different ways to package the same product. This has no impact on "
 "the picking order and is mainly used if you use the EDI module."
 msgstr ""
+"Дає різні способи упаковки той же товар. Це не впливає на порядок вибору та "
+"використовується переважно, якщо ви використовуєте модуль електронного "
+"документообігу."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item_sequence
@@ -1333,6 +1353,7 @@ msgstr "Внутрішнє"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_categ_id
 #: model:ir.model.fields,field_description:product.field_product_template_categ_id
+#: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Internal Category"
 msgstr "Внутрішня категорія"
 
@@ -1365,13 +1386,13 @@ msgstr ""
 #: model:product.product,name:product.product_product_27
 #: model:product.template,name:product.product_product_27_product_template
 msgid "Laptop Customized"
-msgstr ""
+msgstr "Налаштований ноутбук"
 
 #. module: product
 #: model:product.product,name:product.product_product_25
 #: model:product.template,name:product.product_product_25_product_template
 msgid "Laptop E5023"
-msgstr ""
+msgstr "Ноутбук E5023"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute___last_update
@@ -1442,7 +1463,7 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_category_parent_left
 msgid "Left Parent"
-msgstr ""
+msgstr "Залишений батько "
 
 #. module: product
 #: model:product.uom.categ,name:product.uom_categ_length
@@ -1567,13 +1588,13 @@ msgstr ""
 #: model:product.product,name:product.product_product_10
 #: model:product.template,name:product.product_product_10_product_template
 msgid "Mouse, Optical"
-msgstr ""
+msgstr "Миша, Оптична"
 
 #. module: product
 #: model:product.product,name:product.product_product_12
 #: model:product.template,name:product.product_product_12_product_template
 msgid "Mouse, Wireless"
-msgstr ""
+msgstr "Миша, Бездротова"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_11
@@ -2004,11 +2025,6 @@ msgid "Public Price"
 msgstr ""
 
 #. module: product
-#: model:product.pricelist,name:product.list0
-msgid "Public Pricelist"
-msgstr ""
-
-#. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_description_purchase
 #: model:ir.model.fields,field_description:product.field_product_template_description_purchase
 msgid "Purchase Description"
@@ -2139,6 +2155,7 @@ msgstr "Ціна продажу"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_res_partner_property_product_pricelist
+#: model:ir.model.fields,field_description:product.field_res_users_property_product_pricelist
 msgid "Sale Pricelist"
 msgstr "Прайс-лист продажу"
 
@@ -2271,7 +2288,7 @@ msgstr ""
 #. module: product
 #: model:product.category,name:product.product_category_4
 msgid "Software"
-msgstr ""
+msgstr "Програмне забезпечення"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item_categ_id
@@ -2530,6 +2547,8 @@ msgid ""
 "The sale price is managed from the product template. Click on the 'Variant "
 "Prices' button to set the extra attribute prices."
 msgstr ""
+"Ціна продажу регулюється з шаблону товару. Натисніть кнопку Варіанти цін, "
+"щоби встановити додаткові ціни атрибутів."
 
 #. module: product
 #: model:product.product,description_sale:product.product_product_9
@@ -2559,13 +2578,13 @@ msgstr ""
 #: model:ir.model.fields,help:product.field_product_product_volume
 #: model:ir.model.fields,help:product.field_product_template_volume
 msgid "The volume in m3."
-msgstr ""
+msgstr "Об'єм в м3."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_weight
 #: model:ir.model.fields,help:product.field_product_template_weight
 msgid "The weight of the contents in Kg, not including any packaging, etc."
-msgstr ""
+msgstr "Маса вмісту в кг, без упаковки та ін."
 
 #. module: product
 #: model:product.product,website_description:product.product_product_4
@@ -2624,7 +2643,7 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_price_extra
 msgid "This is the sum of the extra price of all attributes"
-msgstr ""
+msgstr "Це сума додаткової ціни на всі атрибути"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
@@ -2633,10 +2652,13 @@ msgstr ""
 
 #. module: product
 #: model:ir.model.fields,help:product.field_res_partner_property_product_pricelist
+#: model:ir.model.fields,help:product.field_res_users_property_product_pricelist
 msgid ""
 "This pricelist will be used, instead of the default one, for sales to the "
 "current partner"
 msgstr ""
+"Цей прейскурант використовуватиметься, не за замовчуванням, для продажу "
+"поточному партнеру"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo_product_code
@@ -2669,6 +2691,11 @@ msgstr "Тип"
 msgid ""
 "USB port allows for software update to ensure ongoing Bluetooth device "
 "compatibility"
+msgstr ""
+
+#. module: product
+#: model:product.pricelist,name:product.list0
+msgid "USD"
 msgstr ""
 
 #. module: product
@@ -2780,7 +2807,7 @@ msgstr "Інформація варіанту"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_price_extra
 msgid "Variant Price Extra"
-msgstr ""
+msgstr "Варіант ціни Екстра"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_form_view
@@ -2906,7 +2933,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.product_attribute_value_3
 msgid "White"
-msgstr ""
+msgstr "Білий"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_4
@@ -2952,14 +2979,6 @@ msgstr ""
 #: model:product.uom.categ,name:product.uom_categ_wtime
 msgid "Working Time"
 msgstr "Робочий час"
-
-#. module: product
-#: code:addons/product/models/res_currency.py:17
-#, python-format
-msgid ""
-"You cannot define a rounding factor for the company's main currency that is "
-"smaller than the decimal precision of 'Account'."
-msgstr ""
 
 #. module: product
 #: code:addons/product/models/decimal_precision.py:16
@@ -3082,7 +3101,7 @@ msgstr ""
 #: model:product.product,name:product.product_product_6
 #: model:product.template,name:product.product_product_6_product_template
 msgid "iPad Mini"
-msgstr ""
+msgstr "iPad Mini"
 
 #. module: product
 #: model:product.product,name:product.product_product_4
@@ -3102,7 +3121,7 @@ msgstr ""
 #: model:product.template,name:product.product_product_11_product_template
 #: model:product.template,name:product.product_product_11b_product_template
 msgid "iPod"
-msgstr ""
+msgstr "iPod"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_11
@@ -3158,7 +3177,7 @@ msgstr ""
 #. module: product
 #: model:ir.model,name:product.model_product_attribute_value
 msgid "product.attribute.value"
-msgstr ""
+msgstr "product.attribute.value"
 
 #. module: product
 #: model:ir.model,name:product.model_product_price_history

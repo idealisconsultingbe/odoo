@@ -335,9 +335,15 @@ For example:
   $ odoo-bin --addons-path=~/src/custom_modules,~/src/enterprise,~/src/odoo/addons
 
 .. warning:: The Enterprise git repository **does not contain the full Odoo
-    source code**. You need to clone both the Community and Enterprise repository to
-    have a working Odoo installation. The Download_ page contains the entire
-    source code but is not updateable as easily.
+    source code**. It is only a collection of extra add-ons. The main server
+    code is in the Community version.  Running the Enterprise version actually
+    means running the server from the Community version with the addons-path option
+    set to the folder with the Enterprise version.
+    
+    You need to clone both the Community and Enterprise repository to have a working
+    Odoo installation. The Download_ page contains the entire source code but is not
+    updateable as easily.
+
 
 
 Installing dependencies
@@ -475,7 +481,7 @@ Source installation requires manually installing dependencies:
 
         $ sudo npm install -g less
 
-  - on Windows, `install nodejs <http://nodejs.org/download/>`_, reboot (to
+  - on Windows, `install nodejs <https://nodejs.org/en/download/>`_, reboot (to
     update the :envvar:`PATH`) and install less:
 
     .. code-block:: ps1
@@ -540,7 +546,7 @@ default db to serve on localhost:8069
     http://www.enterprisedb.com/products-services-training/pgdownload
 .. _Quilt: http://en.wikipedia.org/wiki/Quilt_(software)
 .. _saas: https://www.odoo.com/page/start
-.. _the wkhtmltopdf download page: http://wkhtmltopdf.org/downloads.html
+.. _the wkhtmltopdf download page: https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.1
 .. _UAC: http://en.wikipedia.org/wiki/User_Account_Control
 .. _wkhtmltopdf: http://wkhtmltopdf.org
 .. _pip: https://pip.pypa.io

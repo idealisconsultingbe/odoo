@@ -14,7 +14,7 @@ class StockMove(models.Model):
     _inherit = "stock.move"
 
     to_refund_so = fields.Boolean(
-        "To Refund in SO", default=False,
+        "To Refund in SO", copy=False, default=False,
         help='Trigger a decrease of the delivered quantity in the associated Sale Order')
 
     @api.multi
@@ -33,7 +33,7 @@ class StockMove(models.Model):
         for move in self:
             if move.picking_id and move.picking_id.group_id:
                 picking = move.picking_id
-                order = self.env['sale.order'].search([('procurement_group_id', '=', picking.group_id.id)])
+                order = self.env['sale.order'].sudo().search([('procurement_group_id', '=', picking.group_id.id)])
                 picking.message_post_with_view(
                     'mail.message_origin_link',
                     values={'self': picking, 'origin': order},
