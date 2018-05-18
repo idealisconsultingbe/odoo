@@ -60,7 +60,7 @@ var KanbanView = View.extend({
     init: function () {
         this._super.apply(this, arguments);
 
-        this.qweb = new QWeb(session.debug, {_s: session.origin});
+        this.qweb = new QWeb(session.debug, {_s: session.origin}, false);
 
         this.limit = this.options.limit || parseInt(this.fields_view.arch.attrs.limit, 10) || 40;
         this.fields = this.fields_view.fields;
@@ -230,7 +230,7 @@ var KanbanView = View.extend({
 
             // fetch group data (display information)
             var group_ids = _.without(_.map(groups, function (elem) { return elem.attributes.value[0];}), undefined);
-            if (options.grouped_by_m2o && group_ids.length) {
+            if (options.grouped_by_m2o && group_ids.length && group_by_fields_to_read.length) {
                 return new data.DataSet(self, options.relation)
                     .read_ids(group_ids, _.union(['display_name'], group_by_fields_to_read))
                     .then(function(results) {
@@ -304,9 +304,13 @@ var KanbanView = View.extend({
         return this._super(action);
     },
     has_active_field: function() {
-        return this.fields.active;
+        return this.fields_view.fields.active;
     },
     _is_quick_create_enabled: function() {
+        var group_by_field = this.group_by_field.split(':')[0]
+        if(!_.contains(['char', 'boolean', 'many2one'], this.fields[group_by_field].type)){
+            return false;
+        }
         if (!this.quick_creatable || !this.is_action_enabled('create'))
             return false;
         if (this.fields_view.arch.attrs.quick_create !== undefined)
@@ -737,14 +741,15 @@ var KanbanView = View.extend({
     add_new_column: function (event) {
         var self = this;
         var model = new Model(this.relation, this.search_context);
-        model.call('create', [{name: event.data.value}], {
+        var name = event.data.value;
+        model.call('name_create', [name], {
             context: this.search_context,
-        }).then(function (id) {
+        }).then(function (result) {
             var dataset = new data.DataSetSearch(self, self.model, self.dataset.get_context(), []);
             var group_data = {
                 records: [],
                 title: event.data.value,
-                id: id,
+                id: result[0],
                 attributes: {folded: false},
                 dataset: dataset,
                 values: {},

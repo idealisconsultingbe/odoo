@@ -47,7 +47,7 @@ class AccountInvoice(models.Model):
             'uom_id': line.product_uom.id,
             'product_id': line.product_id.id,
             'account_id': invoice_line.with_context({'journal_id': self.journal_id.id, 'type': 'in_invoice'})._default_account(),
-            'price_unit': line.order_id.currency_id.compute(line.price_unit, self.currency_id, round=False),
+            'price_unit': line.order_id.currency_id.with_context(date=self.date_invoice).compute(line.price_unit, self.currency_id, round=False),
             'quantity': qty,
             'discount': 0.0,
             'account_analytic_id': line.account_analytic_id.id,
@@ -59,6 +59,13 @@ class AccountInvoice(models.Model):
             data['account_id'] = account.id
         return data
 
+    def _onchange_product_id(self):
+        domain = super(AccountInvoice, self)._onchange_product_id()
+        if self.purchase_id:
+            # Use the purchase uom by default
+            self.uom_id = self.product_id.uom_po_id
+        return domain
+
     # Load all unsold PO lines
     @api.onchange('purchase_id')
     def purchase_order_change(self):
@@ -68,10 +75,7 @@ class AccountInvoice(models.Model):
             self.partner_id = self.purchase_id.partner_id.id
 
         new_lines = self.env['account.invoice.line']
-        for line in self.purchase_id.order_line:
-            # Load a PO line only once
-            if line in self.invoice_line_ids.mapped('purchase_line_id'):
-                continue
+        for line in self.purchase_id.order_line - self.invoice_line_ids.mapped('purchase_line_id'):
             data = self._prepare_invoice_line_from_po_line(line)
             new_line = new_lines.new(data)
             new_line._set_additional_fields(self)
@@ -85,7 +89,7 @@ class AccountInvoice(models.Model):
     def _onchange_currency_id(self):
         if self.currency_id:
             for line in self.invoice_line_ids.filtered(lambda r: r.purchase_line_id):
-                line.price_unit = line.purchase_id.currency_id.compute(line.purchase_line_id.price_unit, self.currency_id, round=False)
+                line.price_unit = line.purchase_id.currency_id.with_context(date=self.date_invoice).compute(line.purchase_line_id.price_unit, self.currency_id, round=False)
 
     @api.onchange('invoice_line_ids')
     def _onchange_origin(self):
@@ -147,6 +151,7 @@ class AccountInvoice(models.Model):
                     valuation_price_unit = i_line.product_id.uom_id._compute_price(i_line.product_id.standard_price, i_line.uom_id)
                     if i_line.product_id.cost_method != 'standard' and i_line.purchase_line_id:
                         #for average/fifo/lifo costing method, fetch real cost price from incomming moves
+                        valuation_price_unit = i_line.purchase_line_id.product_uom._compute_price(i_line.purchase_line_id.price_unit, i_line.uom_id)
                         stock_move_obj = self.env['stock.move']
                         valuation_stock_move = stock_move_obj.search([('purchase_line_id', '=', i_line.purchase_line_id.id), ('state', '=', 'done')])
                         if valuation_stock_move:
@@ -158,7 +163,7 @@ class AccountInvoice(models.Model):
                             valuation_price_unit = valuation_price_unit_total / valuation_total_qty
                             valuation_price_unit = i_line.product_id.uom_id._compute_price(valuation_price_unit, i_line.uom_id)
                     if inv.currency_id.id != company_currency.id:
-                            valuation_price_unit = company_currency.with_context(date=inv.date_invoice).compute(valuation_price_unit, inv.currency_id)
+                            valuation_price_unit = company_currency.with_context(date=inv.date_invoice).compute(valuation_price_unit, inv.currency_id, round=False)
                     if valuation_price_unit != i_line.price_unit and line['price_unit'] == i_line.price_unit and acc:
                         # price with discount and without tax included
                         price_unit = i_line.price_unit * (1 - (i_line.discount or 0.0) / 100.0)
@@ -217,5 +222,5 @@ class AccountInvoiceLine(models.Model):
     _inherit = 'account.invoice.line'
 
     purchase_line_id = fields.Many2one('purchase.order.line', 'Purchase Order Line', ondelete='set null', index=True, readonly=True)
-    purchase_id = fields.Many2one('purchase.order', related='purchase_line_id.order_id', string='Purchase Order', store=False, readonly=True,
+    purchase_id = fields.Many2one('purchase.order', related='purchase_line_id.order_id', string='Purchase Order', store=False, readonly=True, related_sudo=False,
         help='Associated Purchase Order. Filled in automatically when a PO is chosen on the vendor bill.')

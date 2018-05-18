@@ -71,7 +71,10 @@ class StockQuant(models.Model):
             valuation_update = newprice - quant.cost
             # this is where we post accounting entries for adjustment, if needed
             # If neg quant period already closed (likely with manual valuation), skip update
-            if not quant.company_id.currency_id.is_zero(valuation_update) and move._check_lock_date():
+            lock_date = max(move.company_id.period_lock_date, move.company_id.fiscalyear_lock_date)
+            if self.user_has_groups('account.group_account_manager'):
+                lock_date = move.company_id.fiscalyear_lock_date
+            if not quant.company_id.currency_id.is_zero(valuation_update) and lock_date and move.date[:10] > lock_date:
                 quant.with_context(force_valuation_amount=valuation_update)._account_entry_move(move)
 
             # update the standard price of the product, only if we would have
@@ -173,6 +176,12 @@ class StockQuant(models.Model):
 class StockMove(models.Model):
     _inherit = "stock.move"
 
+    def _set_default_price_moves(self):
+        # When the cost method is in real or average price, the price can be set to 0.0 on the PO
+        # So the price doesn't have to be updated
+        moves = super(StockMove, self)._set_default_price_moves()
+        return moves.filtered(lambda m: not m.product_id.cost_method in ('real', 'average'))
+
     @api.multi
     def action_done(self):
         self.product_price_update_before_done()
@@ -185,7 +194,7 @@ class StockMove(models.Model):
         tmpl_dict = defaultdict(lambda: 0.0)
         # adapt standard price on incomming moves if the product cost_method is 'average'
         std_price_update = {}
-        for move in self.filtered(lambda move: move.location_id.usage == 'supplier' and move.product_id.cost_method == 'average'):
+        for move in self.filtered(lambda move: move.location_id.usage in ('supplier', 'production') and move.product_id.cost_method == 'average'):
             product_tot_qty_available = move.product_id.qty_available + tmpl_dict[move.product_id.id]
 
             # if the incoming move is for a purchase order with foreign currency, need to call this to get the same value that the quant will use.
@@ -306,8 +315,8 @@ class StockMove(models.Model):
             'product_uom_id': self.product_id.uom_id.id,
             'ref': self.picking_id.name,
             'partner_id': partner_id,
-            'debit': debit_value,
-            'credit': 0,
+            'debit': debit_value if debit_value > 0 else 0,
+            'credit': -debit_value if debit_value < 0 else 0,
             'account_id': debit_account_id,
         }
         credit_line_vals = {
@@ -317,8 +326,8 @@ class StockMove(models.Model):
             'product_uom_id': self.product_id.uom_id.id,
             'ref': self.picking_id.name,
             'partner_id': partner_id,
-            'credit': credit_value,
-            'debit': 0,
+            'credit': credit_value if credit_value > 0 else 0,
+            'debit': -credit_value if credit_value < 0 else 0,
             'account_id': credit_account_id,
         }
         res = [(0, 0, debit_line_vals), (0, 0, credit_line_vals)]

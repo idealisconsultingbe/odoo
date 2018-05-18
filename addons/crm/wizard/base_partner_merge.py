@@ -199,7 +199,7 @@ class MergePartnerAutomatic(models.TransientModel):
                 except psycopg2.Error:
                     # updating fails, most likely due to a violated unique constraint
                     # keeping record with nonexistent partner_id is useless, better delete it
-                    query = 'DELETE FROM %(table)s WHERE %(column)s IN %%s' % query_dic
+                    query = 'DELETE FROM "%(table)s" WHERE "%(column)s" IN %%s' % query_dic
                     self._cr.execute(query, (tuple(src_partners.ids),))
 
     @api.model
@@ -489,13 +489,19 @@ class MergePartnerAutomatic(models.TransientModel):
 
         counter = 0
         for min_id, aggr_ids in self._cr.fetchall():
-            # exclude partner according to options
-            if model_mapping and self._partner_use_in(aggr_ids, model_mapping):
+            # To ensure that the used partners are accessible by the user
+            partners = self.env['res.partner'].search([('id', 'in', aggr_ids)])
+            if len(partners) < 2:
                 continue
+
+            # exclude partner according to options
+            if model_mapping and self._partner_use_in(partners.ids, model_mapping):
+                continue
+
             self.env['base.partner.merge.line'].create({
                 'wizard_id': self.id,
                 'min_id': min_id,
-                'aggr_ids': aggr_ids,
+                'aggr_ids': partners.ids,
             })
             counter += 1
 
