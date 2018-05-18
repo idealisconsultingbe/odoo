@@ -565,7 +565,7 @@ class AccountBankStatementLine(models.Model):
         """
         # Blue lines = payment on bank account not assigned to a statement yet
         reconciliation_aml_accounts = [self.journal_id.default_credit_account_id.id, self.journal_id.default_debit_account_id.id]
-        domain_reconciliation = ['&', '&', ('statement_id', '=', False), ('account_id', 'in', reconciliation_aml_accounts), ('payment_id','<>', False)]
+        domain_reconciliation = ['&', ('statement_id', '=', False), ('account_id', 'in', reconciliation_aml_accounts)]
 
         # Black lines = unreconciled & (not linked to a payment or open balance created by statement
         domain_matching = ['&', ('reconciled', '=', False), '|', ('payment_id','=',False), ('statement_id', '<>', False)]
