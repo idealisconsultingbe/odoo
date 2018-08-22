@@ -13,13 +13,14 @@
 # Vladimir Petrov <vladimir.petrov@gmail.com>, 2017
 # kirily <kiril@teracomp.eu>, 2017
 # Albena Mincheva <albena_vicheva@abv.bg>, 2018
+# Maria Boyadjieva <marabo2000@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-14 15:53+0000\n"
 "PO-Revision-Date: 2016-11-14 15:53+0000\n"
-"Last-Translator: Albena Mincheva <albena_vicheva@abv.bg>, 2018\n"
+"Last-Translator: Maria Boyadjieva <marabo2000@gmail.com>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/odoo/teams/41243/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -809,7 +810,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mail.field_mail_message_child_ids
 #: model:ir.model.fields,field_description:mail.field_survey_mail_compose_message_child_ids
 msgid "Child Messages"
-msgstr ""
+msgstr "Второстепенни известия"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.view_server_action_form_template
@@ -1216,6 +1217,8 @@ msgid ""
 "Do not keep a copy of the email in the document communication history (mass "
 "mailing only)"
 msgstr ""
+"Не съхранявайте копие на имейла в историята на документната комуникация "
+"(само за масова поща)"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_followers
@@ -1405,7 +1408,7 @@ msgstr ""
 #: code:addons/mail/models/mail_template.py:363
 #, python-format
 msgid "Failed to render template %r using values %r"
-msgstr ""
+msgstr "Неуспешно конвертиране на шаблон, %r използващ стойности %r"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail_failure_reason
@@ -1459,6 +1462,8 @@ msgid ""
 "Final placeholder expression, to be copy-pasted in the desired template "
 "field."
 msgstr ""
+"Окончателен израз на значима нула, предназначен да бъде копиран и поставен в"
+" желаното поле на шаблона."
 
 #. module: mail
 #: selection:mail.channel.partner,fold_state:0
@@ -2009,6 +2014,8 @@ msgid ""
 "Invalid record set: should be called as model (without records) or on "
 "single-record recordset"
 msgstr ""
+"Невалиден набор от записи: трябва да се нарече модел (без записи) или набор "
+"от единични записи"
 
 #. module: mail
 #: code:addons/mail/controllers/main.py:43
@@ -2398,7 +2405,7 @@ msgstr ""
 #: code:addons/mail/models/mail_mail.py:318
 #, python-format
 msgid "Mail Delivery Failed"
-msgstr ""
+msgstr "Неуспешно доставяне на поща"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_tracking_value
@@ -2722,7 +2729,7 @@ msgstr ""
 #. module: mail
 #: selection:res.partner,notify_email:0
 msgid "Never"
-msgstr ""
+msgstr "Никога"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_tracking_value_new_value_char
@@ -3354,7 +3361,7 @@ msgstr "Снимка"
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_copyvalue
 #: model:ir.model.fields,field_description:mail.field_mail_template_copyvalue
 msgid "Placeholder Expression"
-msgstr ""
+msgstr "Израз-заместител"
 
 #. module: mail
 #. openerp-web
@@ -3374,6 +3381,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:mail.view_server_action_form_template
 msgid "Please set the Base Model before setting the action details."
 msgstr ""
+"Моля настройте основния модел преди да настроите подробности за действието."
 
 #. module: mail
 #. openerp-web
@@ -3512,7 +3520,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mail.field_mail_wizard_invite_res_model
 #: model:ir.model.fields,field_description:mail.field_survey_mail_compose_message_model
 msgid "Related Document Model"
-msgstr ""
+msgstr "Модел на сродни документи"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.view_mail_tracking_value_form
@@ -3527,7 +3535,7 @@ msgstr "Свързан Партньор"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_message_subtype_relation_field
 msgid "Relation field"
-msgstr ""
+msgstr "Поле за връзка"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.email_template_form
@@ -3653,6 +3661,8 @@ msgid ""
 "Select target field from the related document model.\n"
 "If it is a relationship field you will be able to select a target field at the destination of the relationship."
 msgstr ""
+"Изберете целево поле от свързания модел на документ.\n"
+"Яко това е поле за връзка, ще можете да изберете целево поле в самото местоназначение на връзката."
 
 #. module: mail
 #: selection:mail.channel,public:0
@@ -3838,7 +3848,7 @@ msgstr "Състояние"
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_sub_model_object_field
 #: model:ir.model.fields,field_description:mail.field_mail_template_sub_model_object_field
 msgid "Sub-field"
-msgstr ""
+msgstr "Подполе"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_sub_object
@@ -4386,6 +4396,9 @@ msgid ""
 "When a relationship field is selected as first field, this field lets you "
 "select the target field within the destination document model (sub-model)."
 msgstr ""
+"Когато полето за връзка е избрано като първо поле, това поле Ви позволява да"
+" изберете целевото поле в рамките на модела на документа за "
+"местоназначението (подмодел)."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_email_template_preview_sub_object
@@ -4394,6 +4407,8 @@ msgid ""
 "When a relationship field is selected as first field, this field shows the "
 "document model the relationship goes to."
 msgstr ""
+"Когато полето за връзка е избрано като първо поле, това поле показва модела "
+"на документа, към който е причислена връзката."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_compose_message_is_log
@@ -4480,7 +4495,7 @@ msgstr ""
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.message_user_assigned
 msgid "You have been assigned to the"
-msgstr ""
+msgstr "Разпределени сте към"
 
 #. module: mail
 #. openerp-web
@@ -4599,7 +4614,7 @@ msgstr "ir.actions.server"
 #. module: mail
 #: model:ir.model,name:mail.model_ir_autovacuum
 msgid "ir.autovacuum"
-msgstr ""
+msgstr "ir.autovacuum"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_alias_mixin

@@ -7,6 +7,7 @@
 # Kaloyan Naumov <kaloyan@lumnus.net>, 2016
 # Martin Trigaux, 2016
 # kalatchev, 2016
+# Maria Boyadjieva <marabo2000@gmail.com>, 2016
 # Anton Vassilev, 2016
 # Vladimir Dachev <v.dachev@dalkomotors.com>, 2016
 # B Dochev, 2017
@@ -589,6 +590,11 @@ msgid ""
 "                                It's good practice to try to engage with your visitors on the homepage:\n"
 "                                Contact Us, Subscribe to Get More Information, Check the Catalog, etc."
 msgstr ""
+"<strong>'От разговор към действие'</strong><br/>\n"
+"                                Добавете един, само един 'от разговор към действие' към началната си страница. Вачалната Ви страница е\n"
+"                                е страницата, която посреща най-много посетители.<br/>\n"
+"                                Добра практика е да се опитате да се ангажирате с посетителите си в началната страница:\n"
+"                                Свържете се с нас, абонирайте се за 'Получавайте повече информация', разгледайте каталога и т.н."
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -608,6 +614,10 @@ msgid ""
 "                                social proofs about your products or services; customer quotes, videos,\n"
 "                                photos of your products in actions, twitter quotes, etc."
 msgstr ""
+"<strong>Показвайте обществено одобрение</strong><br/>\n"
+"                                Добра практика е под основния Ви банер или 'от разговор към действие' да поставяте\n"
+"                                коментари - израз на обществено одобрение относно Вашите продукти или услуги; цитати от клиенти, видея,\n"
+"                                снимки на продуктите Ви в действие, цитати от twitter и т.н."
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.http_error_debug
@@ -858,7 +868,7 @@ msgstr "Добави изображение от меню \"Персонализ
 #: code:addons/website/static/src/xml/website.contentMenu.xml:47
 #, python-format
 msgid "Add Menu Entry"
-msgstr "Добавяне на Меню"
+msgstr "Добавете запис в меню"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_feature_grid
@@ -946,7 +956,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.500
 msgid "An error occured while rendering the template"
-msgstr "Възникна грешка при оказване на шаблона "
+msgstr "При конвертирането на шаблона възникна грешка "
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_title
@@ -983,7 +993,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Attract new leads"
-msgstr ""
+msgstr "Привличайте нови лийдове"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_ir_act_server_website_published
@@ -1128,7 +1138,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_menu_child_id
 msgid "Child Menus"
-msgstr "Под Менюта"
+msgstr "Подменюта"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_big_picture
@@ -1229,7 +1239,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_config_settings_compress_html
 msgid "Compress rendered HTML"
-msgstr ""
+msgstr "Компресирайте конвертиран HTML"
 
 #. module: website
 #: model:ir.ui.menu,name:website.menu_website_global_configuration
@@ -1331,6 +1341,9 @@ msgid ""
 "Create and customize forms to generate emails, leads, issues and extra "
 "information in the checkout process (new snippet available)"
 msgstr ""
+"Създайте и персонализирайте бланки, за да можете да създавате имейли, "
+"лийдове, грешки и допълнителна информация в хода на процеса по отписване "
+"(наличен е нов фрагмент)"
 
 #. module: website
 #. openerp-web
@@ -1749,6 +1762,8 @@ msgid ""
 "For example, use pictures to help break up large areas of text by altering\n"
 "                                    Text-Image and Image-Text blocks. If you prefer icons, use the Features or Feature Grid blocks."
 msgstr ""
+"Например, използвайте снимки, за да улесните разбиването на големи части от текста, като променяте\n"
+"                                    блоковете Text-Image и Image-Text. Ако предпочитате икони, използвайте Характеристиките или Матричните блокове на характеристиките."
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -1756,6 +1771,8 @@ msgid ""
 "For the Odoo Team,<br/>\n"
 "                            Fabien Pinckaers, Founder"
 msgstr ""
+"За Odoo Team,<br/>\n"
+"                            Фабиен Пинкерс, основател"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_config_settings_module_website_form_editor
@@ -2265,7 +2282,7 @@ msgstr "Месец"
 #. module: website
 #: model:ir.ui.view,arch_db:website.view_website_config_settings
 msgid "More Info"
-msgstr ""
+msgstr "Повече информация"
 
 #. module: website
 #. openerp-web
@@ -2646,7 +2663,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_faq_collapse
 msgid "Point of Sale Questions <small>v7</small>"
-msgstr ""
+msgstr "Въпроси, свързани с Център за продажби <small>v7</small>"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -2756,7 +2773,7 @@ msgstr "Публикуван"
 #. module: website
 #: model:ir.ui.view,arch_db:website.http_error_debug
 msgid "QWeb"
-msgstr ""
+msgstr "QWeb"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -3102,11 +3119,14 @@ msgid ""
 "                                device, whether it's multi-touch tablets like an iPad or\n"
 "                                keyboardless resistive touchscreen terminals."
 msgstr ""
+"Центърът за продажби работи перфектно върху всяко устройство с активирано докосване\n"
+"                                независимо дали са мултитъч таблети като iPad или\n"
+"                                безклавиатурни резистивни тъчскрийн терминали."
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.http_error_debug
 msgid "The error occured while rendering the template"
-msgstr ""
+msgstr "При конвертирането на шаблона възникна грешка"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.http_error_debug
@@ -3747,6 +3767,8 @@ msgid ""
 "While an internet connection is required to start the Point of\n"
 "                                Sale, it will stay operational even after a complete disconnection."
 msgstr ""
+"Докато за стартиране на Център за продажби е необходима интернет връзка\n"
+"                                то той ще остане в оперативен режим дори при пълна загуба на интернет връзка."
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_cover
